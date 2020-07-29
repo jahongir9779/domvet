@@ -6,10 +6,12 @@
     <item>
         <shape android:shape="rectangle">
 
-            <gradient
-                android:angle="270"
-                android:endColor="@color/splashGradientEnd"
-                android:startColor="@color/splashGradientStart"/>
+            <solid android:color="#fff" />
+
+            <!--            <gradient-->
+            <!--                android:angle="270"-->
+            <!--                android:endColor="@color/splashGradientEnd"-->
+            <!--                android:startColor="@color/splashGradientStart"/>-->
 
         </shape>
     </item>
@@ -18,12 +20,12 @@
         android:bottom="190dp"
         android:gravity="center"
         android:left="70dp"
-        android:right="120dp"
-        android:top="210dp">
+        android:right="70dp"
+        android:top="190dp">
 
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_launcher_foreground"/>
+            android:src="@drawable/group_2" />
 
     </item>
 </layer-list>

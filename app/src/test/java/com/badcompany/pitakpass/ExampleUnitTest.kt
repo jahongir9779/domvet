@@ -1,4 +1,4 @@
-package com.badcompany.pitakpass
+package com.anymobile.domvet
 
 import org.junit.Test
 

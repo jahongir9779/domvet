@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.badcompany.pitakpass">
+    package="com.anymobile.domvet">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -35,9 +35,9 @@
 
         <!--        <activity android:name=".SmsConfirmationActivity" />-->
 
-        <activity android:name=".ui.SplashActivity"
-            android:screenOrientation="portrait"
-            />
+<!--        <activity android:name=".ui.SplashActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            />-->
         <activity
             android:name=".ui.auth.AuthActivity"
             android:screenOrientation="portrait"
@@ -51,14 +51,14 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+<!--        <meta-data-->
+<!--            android:name="com.google.android.geo.API_KEY"-->
+<!--            android:value="@string/google_maps_key" />-->
 
-        <activity
-            android:name=".MapsActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_maps" />
+<!--        <activity-->
+<!--            android:name=".MapsActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:label="@string/title_activity_maps" />-->
         <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait"
@@ -74,7 +74,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.badcompany.pitakpass.fileprovider"
+            android:authorities="com.anymobile.domvet.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

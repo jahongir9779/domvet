@@ -1,4 +1,4 @@
-package com.badcompany.pitakpass
+package com.anymobile.domvet
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.badcompany.pitakpass", appContext.packageName)
+        assertEquals("com.anymobile.domvet", appContext.packageName)
     }
 }
