@@ -5,7 +5,7 @@
     <color name="colorPrimaryOpacityTwenty">#3342a5f5</color>
     <color name="colorPrimaryDark">#0077c2</color>
     <color name="windowBackground">#fff</color>
-    <color name="colorAccent">#ff5722</color>
+    <color name="colorAccent">#2aa41c</color>
     <color name="splashGradientEnd">#4F2A93</color>
     <color name="splashGradientStart">#CBB5FF</color>
     <color name="button_grey">#B6B6B6</color>
@@ -15,7 +15,8 @@
     <color name="greyBackground">@android:color/background_light</color>
     <color name="textColorGreyDark">#6e6e70</color>
     <color name="orange">#FFA000</color>
-    <color name="ic_grey" >#a1a9c3</color>
+    <color name="ic_grey" >#979797</color>
+    <color name="text_grey" >#666666</color>
     <color name="light_grey" >#ebebee</color>
 
     <color name="neutralColor">#FF393939</color>

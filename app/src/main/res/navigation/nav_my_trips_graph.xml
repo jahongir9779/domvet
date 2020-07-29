@@ -8,9 +8,9 @@
 
     <fragment
         android:id="@+id/navMyTripsFragment"
-        android:name="com.anymobile.domvet.ui.main.mytrips.MyTripsFragment"
+        android:name="com.anymobile.domvet.ui.main.mycalls.MyCallsFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_my_trips"/>
+        tools:layout="@layout/fragment_my_calls"/>
 
 
 

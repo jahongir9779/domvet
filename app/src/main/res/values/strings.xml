@@ -17,7 +17,7 @@
     <string name="prompt_phone_number">Phone</string>
     <string name="prompt_username">Username</string>
     <string name="action_username">Username</string>
-    <string name="register">Register</string>
+    <string name="register">Регистрация</string>
     <string name="name">Name</string>
     <string name="surname">Surname</string>
     <string name="code">Code</string>
@@ -92,4 +92,10 @@
     <string name="no_posts_found">No posts found…</string>
     <string name="reset">Reset</string>
     <string name="tomorrow">Tomorrow</string>
+    <string name="my_finance">Мои финансы</string>
+    <string name="my_calls">Мои вызовы</string>
+    <string name="my_account">Мой аккаунт</string>
+    <string name="phone">Телефон</string>
+    <string name="login_main_title">Стабильный источник новых пациентов</string>
+    <string name="login_sub_title">Зарегистриуйтесь и начните получать вызовы</string>
 </resources>

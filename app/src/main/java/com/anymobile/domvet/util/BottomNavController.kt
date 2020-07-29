@@ -85,10 +85,10 @@
 //
 //    private fun createNavHost(menuItemId: Int): Fragment {
 //        return when (menuItemId) {
-//            R.id.nav_menu_search -> {
+//            R.id.nav_menu_doc_calls -> {
 //                SearchTripNavHostFragment.create(R.navigation.nav_search_trip_graph)
 //            }
-//            R.id.nav_menu_my_trips -> {
+//            R.id.nav_menu_my_calls -> {
 //                MyTripsNavHostFragment.create(R.navigation.nav_my_trips_graph)
 //            }
 //            R.id.nav_menu_profile -> {

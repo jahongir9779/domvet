@@ -15,7 +15,8 @@ import com.anymobile.domvet.fragments.MainNavHostFragment
 import com.anymobile.domvet.ui.BaseActivity
 import com.anymobile.domvet.ui.addpost.AddPostActivity
 import com.anymobile.domvet.ui.auth.AuthActivity
-import com.anymobile.domvet.ui.main.mytrips.MyTripsFragment
+import com.anymobile.domvet.ui.main.finance.FinanceFragment
+import com.anymobile.domvet.ui.main.mycalls.MyCallsFragment
 import com.anymobile.domvet.ui.main.profile.ProfileFragment
 import com.anymobile.domvet.ui.main.searchtrip.SearchTripFragment
 import com.anymobile.domvet.util.AppPreferences
@@ -51,7 +52,7 @@ class MainActivity : BaseActivity(), BottomNavControllerFix.OnNavigationGraphCha
         BottomNavControllerFix(
             this,
             R.id.main_fragments_container,
-            R.id.nav_menu_search,
+            R.id.nav_menu_doc_calls,
             this)
     }
 
@@ -110,13 +111,16 @@ class MainActivity : BaseActivity(), BottomNavControllerFix.OnNavigationGraphCha
         Log.d(TAG, "logInfo: onReSelectItem")
         when (fragment) {
             is SearchTripFragment -> {
-//                navController.navigate(R.id.action_nav_menu_search_self)
+//                navController.navigate(R.id.action_nav_menu_doc_calls_self)
             }
 
-            is MyTripsFragment -> {
-//                navController.navigate(R.id.action_nav_menu_my_trips_self)
+            is MyCallsFragment -> {
+//                navController.navigate(R.id.action_nav_menu_my_calls_self)
             }
 
+            is FinanceFragment -> {
+//                navController.navigate(R.id.action_nav_menu_profile_self)
+            }
             is ProfileFragment -> {
 //                navController.navigate(R.id.action_nav_menu_profile_self)
             }

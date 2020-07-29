@@ -94,6 +94,7 @@
                 android:layout_marginEnd="0dp"
                 android:elevation="3dp"
                 android:maxHeight="?android:actionBarSize"
+                app:itemIconTint="@color/selector_bottom_nav"
                 app:elevation="3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/bottom_nav_menu" />

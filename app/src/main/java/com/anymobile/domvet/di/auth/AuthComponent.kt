@@ -5,7 +5,7 @@ import com.anymobile.domvet.ui.auth.AuthActivity
 import dagger.Subcomponent
 
 @AuthScope
-@Subcomponent(modules = [LoginModule::class, RegisterModule::class, AuthViewModelModule::class, AuthFragmentsModule::class])
+@Subcomponent(modules = [LoginModule::class, AuthViewModelModule::class, AuthFragmentsModule::class])
 interface AuthComponent {
 
     @Subcomponent.Factory

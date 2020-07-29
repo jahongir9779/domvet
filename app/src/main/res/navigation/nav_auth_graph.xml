@@ -12,40 +12,25 @@
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_navLoginFragment_to_navRegisterFragment"
-            app:destination="@id/navRegisterFragment" >
-            <argument
-                android:name="phone"
-                app:argType="string"/>
-        </action>
-        <action
-            android:id="@+id/action_navLoginFragment_to_navPhoneConfirmFragment"
-            app:destination="@id/navPhoneConfirmFragment" >
-            <argument
-                android:name="password"
-                app:argType="string"/>
-
-            <argument
-                android:name="phone"
-                app:argType="string"/>
-        </action>
+            android:id="@+id/action_navLoginFragment_to_navPhoneFragment"
+            app:destination="@id/navPhoneFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/navRegisterFragment"
-        android:name="com.anymobile.domvet.ui.auth.register.RegisterFragment"
-        android:label="@string/title_register"
-        tools:layout="@layout/fragment_register">
-        <action
-            android:id="@+id/action_navRegisterFragment_to_navPhoneConfirmFragment"
-            app:destination="@id/navPhoneConfirmFragment" >
+        android:id="@+id/navPhoneFragment"
+        android:name="com.anymobile.domvet.ui.auth.phone.PhoneFragment"
+        android:label="@string/phone"
+        tools:layout="@layout/fragment_phone">
+        <argument
+            android:name="password"
+            app:argType="string"/>
 
-
-        </action>
         <argument
             android:name="phone"
             app:argType="string"/>
-
+        <action
+            android:id="@+id/action_navPhoneFragment_to_navPhoneConfirmFragment"
+            app:destination="@id/navPhoneConfirmFragment" />
     </fragment>
 
     <fragment

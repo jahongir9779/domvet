@@ -3,62 +3,89 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/nav_menu_search">
+    app:startDestination="@id/nav_menu_doc_calls">
 
     <fragment
-        android:id="@+id/nav_menu_search"
+        android:id="@+id/nav_menu_doc_calls"
         android:name="com.anymobile.domvet.ui.main.searchtrip.SearchTripFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_search_trip">
 
         <action
-            android:id="@+id/action_nav_menu_search_to_nav_menu_my_trips"
-            app:destination="@id/nav_menu_my_trips" />
+            android:id="@+id/action_nav_menu_doc_calls_to_nav_menu_my_calls"
+            app:destination="@id/nav_menu_my_calls" />
         <action
-            android:id="@+id/action_nav_menu_search_to_nav_menu_profile"
+            android:id="@+id/action_nav_menu_doc_calls_to_nav_menu_profile"
             app:destination="@id/nav_menu_profile" />
         <action
-            android:id="@+id/action_nav_menu_search_self"
-            app:popUpToInclusive="true"
-            app:destination="@id/nav_menu_search" />
+            android:id="@+id/action_nav_menu_doc_calls_self"
+            app:destination="@id/nav_menu_doc_calls"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_menu_doc_calls_to_nav_menu_my_finance"
+            app:destination="@id/nav_menu_my_finance" />
 
 
     </fragment>
 
     <fragment
-        android:id="@+id/nav_menu_my_trips"
-        android:name="com.anymobile.domvet.ui.main.mytrips.MyTripsFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_my_trips" >
+        android:id="@+id/nav_menu_my_calls"
+        android:name="com.anymobile.domvet.ui.main.mycalls.MyCallsFragment"
+        android:label="@string/my_calls"
+        tools:layout="@layout/fragment_my_calls">
 
 
         <action
-            android:id="@+id/action_nav_menu_my_trips_to_nav_menu_profile"
+            android:id="@+id/action_nav_menu_my_calls_to_nav_menu_profile"
             app:destination="@id/nav_menu_profile" />
         <action
-            android:id="@+id/action_nav_menu_my_trips_to_nav_menu_search"
-            app:destination="@id/nav_menu_search" />
+            android:id="@+id/action_nav_menu_my_calls_to_nav_menu_doc_calls"
+            app:destination="@id/nav_menu_doc_calls" />
         <action
-            android:id="@+id/action_nav_menu_my_trips_self"
-            app:popUpToInclusive="true"
-            app:destination="@id/nav_menu_my_trips" />
+            android:id="@+id/action_nav_menu_my_calls_self"
+            app:destination="@id/nav_menu_my_calls"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_menu_my_calls_to_nav_menu_my_finance"
+            app:destination="@id/nav_menu_my_finance" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_menu_my_finance"
+        android:name="com.anymobile.domvet.ui.main.profile.ProfileFragment"
+        android:label="@string/my_finance"
+        tools:layout="@layout/fragment_finance">
+
+        <action
+            android:id="@+id/action_nav_menu_profile_to_nav_menu_my_calls"
+            app:destination="@id/nav_menu_my_calls" />
+        <action
+            android:id="@+id/action_nav_menu_profile_to_nav_menu_doc_calls"
+            app:destination="@id/nav_menu_doc_calls" />
+        <action
+            android:id="@+id/action_nav_menu_profile_self"
+            app:destination="@id/nav_menu_profile"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
         android:id="@+id/nav_menu_profile"
         android:name="com.anymobile.domvet.ui.main.profile.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" >
+        android:label="@string/my_account"
+        tools:layout="@layout/fragment_profile">
 
         <action
-            android:id="@+id/action_nav_menu_profile_to_nav_menu_my_trips"
-            app:destination="@id/nav_menu_my_trips" />
+            android:id="@+id/action_nav_menu_profile_to_nav_menu_my_calls"
+            app:destination="@id/nav_menu_my_calls" />
         <action
-            android:id="@+id/action_nav_menu_profile_to_nav_menu_search"
-            app:destination="@id/nav_menu_search" />
+            android:id="@+id/action_nav_menu_profile_to_nav_menu_doc_calls"
+            app:destination="@id/nav_menu_doc_calls" />
         <action
             android:id="@+id/action_nav_menu_profile_self"
-            app:popUpToInclusive="true"
-            app:destination="@id/nav_menu_profile" />
+            app:destination="@id/nav_menu_profile"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_menu_profile_to_nav_menu_my_finance"
+            app:destination="@id/nav_menu_my_finance" />
     </fragment>
 </navigation>

@@ -13,6 +13,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.anymobile.domvet.R
+import com.anymobile.domvet.fragments.FinanceNavHostFragment
 import com.anymobile.domvet.fragments.MyTripsNavHostFragment
 import com.anymobile.domvet.fragments.ProfileNavHostFragment
 import com.anymobile.domvet.fragments.SearchTripNavHostFragment
@@ -38,7 +39,8 @@ class BottomNavControllerFix(
 ) {
     var fragment1 = SearchTripNavHostFragment.create(R.navigation.nav_search_trip_graph)
     var fragment2 = MyTripsNavHostFragment.create(R.navigation.nav_my_trips_graph)
-    var fragment3 = ProfileNavHostFragment.create(R.navigation.nav_profile_graph)
+    var fragment3 = FinanceNavHostFragment.create(R.navigation.nav_finance_graph)
+    var fragment4 = ProfileNavHostFragment.create(R.navigation.nav_profile_graph)
 
     var active: Fragment? = fragment1
 
@@ -55,8 +57,8 @@ class BottomNavControllerFix(
 //            fragment1 = fragmentManager.findFragmentByTag(R.id.nav_menu_trade.toString())
 //                ?: createNavHost(R.id.nav_menu_trade)
 
-//            fragment2 = fragmentManager.findFragmentByTag(R.id.nav_menu_my_trips.toString())
-//                ?: createNavHost(R.id.nav_menu_my_trips)
+//            fragment2 = fragmentManager.findFragmentByTag(R.id.nav_menu_my_calls.toString())
+//                ?: createNavHost(R.id.nav_menu_my_calls)
 
 //            fragment3 = fragmentManager.findFragmentByTag(R.id.nav_menu_profile.toString())
 //                ?: createNavHost(R.id.nav_menu_profile)
@@ -69,7 +71,7 @@ class BottomNavControllerFix(
 //                .hide(fragment4)
 //                .commit()
             fragmentManager.beginTransaction()
-                .add(containerId, fragment2, R.id.nav_menu_my_trips.toString())
+                .add(containerId, fragment2, R.id.nav_menu_my_calls.toString())
                 .hide(fragment2)
                 .commit()
             fragmentManager.beginTransaction()
@@ -77,7 +79,11 @@ class BottomNavControllerFix(
                 .hide(fragment3)
                 .commit()
             fragmentManager.beginTransaction()
-                .add(containerId, fragment1, R.id.nav_menu_search.toString())
+                .add(containerId, fragment4, R.id.nav_menu_my_finance.toString())
+                .hide(fragment4)
+                .commit()
+            fragmentManager.beginTransaction()
+                .add(containerId, fragment1, R.id.nav_menu_doc_calls.toString())
                 .commit()
 
             active = fragment1
@@ -99,16 +105,22 @@ class BottomNavControllerFix(
 
         //OPTION 2
         when (menuItemId) {
-            R.id.nav_menu_search -> {
+            R.id.nav_menu_doc_calls -> {
                 fragmentManager.beginTransaction().hide(active!!).show(fragment1)
                     .addToBackStack(null).commit()
                 active = fragment1
                 (activity as MainActivity).hideTabLayout()
             }
-            R.id.nav_menu_my_trips -> {
+            R.id.nav_menu_my_calls -> {
                 fragmentManager.beginTransaction().hide(active!!).show(fragment2)
                     .addToBackStack(null).commit()
                 active = fragment2
+                (activity as MainActivity).showTabLayout()
+            }
+            R.id.nav_menu_my_finance -> {
+                fragmentManager.beginTransaction().hide(active!!).show(fragment4)
+                    .addToBackStack(null).commit()
+                active = fragment4
                 (activity as MainActivity).showTabLayout()
             }
             else -> {
@@ -142,23 +154,6 @@ class BottomNavControllerFix(
 
         return true
     }
-
-//    private fun createNavHost(menuItemId: Int): Fragment {
-//        return when (menuItemId) {
-//            R.id.nav_menu_trade -> {
-//                TradeNavHostFragment.create(R.navigation.nav_trade_graph)
-//            }
-//            R.id.nav_menu_position -> {
-//                MyOrdersNavHostFragment.create(R.navigation.nav_my_trips_graph)
-//            }
-//            R.id.nav_menu_my_trips -> {
-//                MyOrdersNavHostFragment.create(R.navigation.nav_my_trips_graph)
-//            }
-//            else -> {
-//                ProfileNavHostFragment.create(R.navigation.nav_profile_graph)
-//            }
-//        }
-//    }
 
     @SuppressLint("RestrictedApi")
     fun onBackPressed() {

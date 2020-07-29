@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.anymobile.domvet.di.viewmodels.MainViewModelFactory
 import com.anymobile.domvet.ui.main.MainViewModel
-import com.anymobile.domvet.ui.main.mytrips.MyTripsViewModel
-import com.anymobile.domvet.ui.main.mytrips.activetrips.ActiveTripsViewModel
-import com.anymobile.domvet.ui.main.mytrips.historytrips.HistoryTripsViewModel
+import com.anymobile.domvet.ui.main.mycalls.MyCallsViewModel
+import com.anymobile.domvet.ui.main.mycalls.activecalls.ActiveCallsViewModel
+import com.anymobile.domvet.ui.main.mycalls.historycalls.HistoryCallsViewModel
 import com.anymobile.domvet.ui.main.profile.ProfileViewModel
 import com.anymobile.domvet.ui.main.searchtrip.SearchTripViewModel
 import dagger.Binds
@@ -36,17 +36,17 @@ abstract class MainViewModelModule {
 
     @Binds
     @IntoMap
-    @MainViewModelKey(MyTripsViewModel::class)
-    abstract fun bindMyTripsViewModel(viewModel: MyTripsViewModel): ViewModel
+    @MainViewModelKey(MyCallsViewModel::class)
+    abstract fun bindMyTripsViewModel(viewModel: MyCallsViewModel): ViewModel
 
     @Binds
     @IntoMap
-    @MainViewModelKey(ActiveTripsViewModel::class)
-    abstract fun bindActiveTripsViewModel(viewModel: ActiveTripsViewModel): ViewModel
+    @MainViewModelKey(ActiveCallsViewModel::class)
+    abstract fun bindActiveTripsViewModel(viewModel: ActiveCallsViewModel): ViewModel
 
     @Binds
     @IntoMap
-    @MainViewModelKey(HistoryTripsViewModel::class)
-    abstract fun bindHistoryTripsViewModel(viewModel: HistoryTripsViewModel): ViewModel
+    @MainViewModelKey(HistoryCallsViewModel::class)
+    abstract fun bindHistoryTripsViewModel(viewModel: HistoryCallsViewModel): ViewModel
 
 }
