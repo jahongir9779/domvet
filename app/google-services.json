@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "323875719268",
+    "firebase_url": "https://domvet-doctor.firebaseio.com",
+    "project_id": "domvet-doctor",
+    "storage_bucket": "domvet-doctor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323875719268:android:2a8ef05f7cc738e6393771",
+        "android_client_info": {
+          "package_name": "com.sablab.domvetdoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323875719268-b6arg937mcpgstkt7fi3vkfgfcnebrvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr4j2LsOtufDGm_jDzMbf2GuyGGpDAofE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323875719268-b6arg937mcpgstkt7fi3vkfgfcnebrvd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "323875719268-up3tvnhu8e0idc94kphc4tljqbn67lbq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sablab.domvetdoctor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

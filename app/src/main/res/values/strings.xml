@@ -59,7 +59,7 @@
     <string name="car_and_text">Car and note</string>
     <string name="preview_post">Preview post</string>
     <string name="price_and_seats">Price and seats</string>
-    <string name="next">Next</string>
+    <string name="next">Далее</string>
     <string name="back">Back</string>
     <string name="create">Create</string>
     <string name="departure_asap">Departing as soon as full</string>
@@ -98,4 +98,10 @@
     <string name="phone">Телефон</string>
     <string name="login_main_title">Стабильный источник новых пациентов</string>
     <string name="login_sub_title">Зарегистриуйтесь и начните получать вызовы</string>
+    <string name="phone_main_title">Введите номер телефона для входа</string>
+    <string name="phone_sub_title">Мы пришлем вам код подтверждения</string>
+    <string name="text_terms">Нажимая кнопку \"Далее\" я принимаю Пользовательское соглашение</string>
+    <string name="receive_sms_title">Введите код подтверждения</string>
+    <string name="receive_sms_subtitle">Мы отправили вам SMS с проверочным кодом</string>
+    <string name="resend_sms">Отправить SMS повторно</string>
 </resources>

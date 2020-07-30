@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.anymobile.domvet",
+  "applicationId": "com.sablab.domvetdoctor",
   "variantName": "release",
   "elements": [
     {

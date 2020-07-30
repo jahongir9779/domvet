@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_menu_doc_calls"
-        android:name="com.anymobile.domvet.ui.main.searchtrip.SearchTripFragment"
+        android:name="com.sablab.domvetdoctor.ui.main.searchtrip.SearchTripFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_search_trip">
 
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/nav_menu_my_calls"
-        android:name="com.anymobile.domvet.ui.main.mycalls.MyCallsFragment"
+        android:name="com.sablab.domvetdoctor.ui.main.mycalls.MyCallsFragment"
         android:label="@string/my_calls"
         tools:layout="@layout/fragment_my_calls">
 
@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/nav_menu_my_finance"
-        android:name="com.anymobile.domvet.ui.main.profile.ProfileFragment"
+        android:name="com.sablab.domvetdoctor.ui.main.profile.ProfileFragment"
         android:label="@string/my_finance"
         tools:layout="@layout/fragment_finance">
 
@@ -70,7 +70,7 @@
 
     <fragment
         android:id="@+id/nav_menu_profile"
-        android:name="com.anymobile.domvet.ui.main.profile.ProfileFragment"
+        android:name="com.sablab.domvetdoctor.ui.main.profile.ProfileFragment"
         android:label="@string/my_account"
         tools:layout="@layout/fragment_profile">
 

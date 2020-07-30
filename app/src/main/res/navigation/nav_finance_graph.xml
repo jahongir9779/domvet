@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/navFinanceFragment"
-        android:name="com.anymobile.domvet.ui.main.finance.FinanceFragment"
+        android:name="com.sablab.domvetdoctor.ui.main.finance.FinanceFragment"
         android:label="@string/my_finance"
         tools:layout="@layout/fragment_finance" />
 
