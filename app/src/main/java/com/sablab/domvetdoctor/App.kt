@@ -9,6 +9,7 @@ import com.sablab.domvetdoctor.di.DaggerAppComponent
 import com.sablab.domvetdoctor.di.addPost.AddPostComponent
 import com.sablab.domvetdoctor.di.auth.AuthComponent
 import com.sablab.domvetdoctor.di.main.MainComponent
+import com.sablab.domvetdoctor.di.registration.RegistrationComponent
 
 /**
  * Created by jahon on 13-Mar-18.
@@ -18,6 +19,7 @@ open class App : Application() {
 
     lateinit var appComponent: AppComponent
     private var authComponent: AuthComponent? = null
+    private var registrationComponent: RegistrationComponent? = null
 
     //    private var addCarComponent: AddCarComponent? = null
     private var addPostComponent: AddPostComponent? = null
@@ -50,11 +52,21 @@ open class App : Application() {
         authComponent = null
     }
 
+    fun releaseRegistrationComponent() {
+        registrationComponent = null
+    }
+
     fun authComponent(): AuthComponent {
         if (authComponent == null) {
             authComponent = appComponent.authComponent().create()
         }
         return authComponent as AuthComponent
+    }
+    fun registrationComponent(): RegistrationComponent {
+        if (registrationComponent == null) {
+            registrationComponent = appComponent.registrationComponent().create()
+        }
+        return registrationComponent as RegistrationComponent
     }
 
     fun mainComponent(): MainComponent {

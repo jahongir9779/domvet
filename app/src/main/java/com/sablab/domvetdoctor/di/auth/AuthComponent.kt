@@ -1,6 +1,5 @@
 package com.sablab.domvetdoctor.di.auth
 
-import com.sablab.domvetdoctor.di.addPost.AddPostFragmentsModule
 import com.sablab.domvetdoctor.ui.auth.AuthActivity
 import dagger.Subcomponent
 

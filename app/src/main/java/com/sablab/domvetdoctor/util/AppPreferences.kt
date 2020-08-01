@@ -18,10 +18,10 @@ import splitties.preferences.Preferences
     var language by stringPref("uz")
 
     @ExperimentalSplittiesApi
-    var status by intPref(0)
+    var status by stringOrNullPref(null)
 
     @ExperimentalSplittiesApi
-    var id by intPref(0)
+    var id by stringOrNullPref(null)
 
     @ExperimentalSplittiesApi
     var phoneNumber by stringPref("")
@@ -64,5 +64,5 @@ import splitties.preferences.Preferences
 
 
     @ExperimentalSplittiesApi
-    var createdAt by longPref(0)
+    var createdAt by stringOrNullPref(null)
 }

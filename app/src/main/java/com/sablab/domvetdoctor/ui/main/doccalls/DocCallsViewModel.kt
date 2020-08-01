@@ -1,11 +1,10 @@
-package com.sablab.domvetdoctor.ui.main.searchtrip
+package com.sablab.domvetdoctor.ui.main.doccalls
 
 import androidx.lifecycle.viewModelScope
 import com.sablab.domvetdoctor.domain.model.DriverPost
 import com.sablab.domvetdoctor.util.Constants
 import com.sablab.domvetdoctor.util.ResultWrapper
 import com.sablab.domvetdoctor.domain.model.Filter
-import com.sablab.domvetdoctor.domain.model.PassengerPost
 import com.sablab.domvetdoctor.domain.model.Place
 import com.sablab.domvetdoctor.domain.usecases.GetDriverPostWithFilter
 import com.sablab.domvetdoctor.domain.usecases.GetPlacesFeed
@@ -19,8 +18,8 @@ import kotlinx.coroutines.withContext
 import splitties.experimental.ExperimentalSplittiesApi
 import javax.inject.Inject
 
-class SearchTripViewModel @Inject constructor(val getDriverPostWithFilter: GetDriverPostWithFilter,
-                                              private val getPlacesFeed: GetPlacesFeed) :
+class DocCallsViewModel @Inject constructor(val getDriverPostWithFilter: GetDriverPostWithFilter,
+                                            private val getPlacesFeed: GetPlacesFeed) :
     BaseViewModel() {
 
 

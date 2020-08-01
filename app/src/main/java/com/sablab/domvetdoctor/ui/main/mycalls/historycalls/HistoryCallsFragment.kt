@@ -21,7 +21,7 @@ import com.sablab.domvetdoctor.ui.interfaces.IOnPostActionListener
 import com.sablab.domvetdoctor.ui.main.MainViewModel
 import com.sablab.domvetdoctor.ui.viewgroups.HistoryPostItem
 import com.sablab.domvetdoctor.ui.viewgroups.LoadingItemSmall
-import com.google.android.material.snackbar.Snackbar
+import com.sablab.domvetdoctor.ui.main.finance.history.HistoryTransactionsViewModel
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import kotlinx.android.synthetic.main.fragment_history_trips.*
@@ -34,7 +34,7 @@ class HistoryCallsFragment @Inject constructor(private val viewModelFactory: Vie
 
 
     private val adapter = GroupAdapter<GroupieViewHolder>()
-    val viewmodel: HistoryCallsViewModel by viewModels {
+    val viewmodel: HistoryTransactionsViewModel by viewModels {
         viewModelFactory
     }
 
@@ -128,15 +128,15 @@ class HistoryCallsFragment @Inject constructor(private val viewModelFactory: Vie
             val response = it ?: return@Observer
             when (response) {
                 is ErrorWrapper.ResponseError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.message!!,
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.message!!,
+//                                  Snackbar.LENGTH_SHORT).show()
                     removeLoadingMore()
                 }
                 is ErrorWrapper.SystemError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.err.localizedMessage.toString(),
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.err.localizedMessage.toString(),
+//                                  Snackbar.LENGTH_SHORT).show()
                     removeLoadingMore()
                 }
                 is ResultWrapper.Success -> {
@@ -153,15 +153,15 @@ class HistoryCallsFragment @Inject constructor(private val viewModelFactory: Vie
             val response = it ?: return@Observer
             when (response) {
                 is ErrorWrapper.ResponseError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.message!!,
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.message!!,
+//                                  Snackbar.LENGTH_SHORT).show()
 
                 }
                 is ErrorWrapper.SystemError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.err.localizedMessage.toString(),
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.err.localizedMessage.toString(),
+//                                  Snackbar.LENGTH_SHORT).show()
                 }
                 is ResultWrapper.Success -> {
 

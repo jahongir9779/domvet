@@ -4,6 +4,7 @@ import android.app.Application
 import com.sablab.domvetdoctor.di.addPost.AddPostComponent
 import com.sablab.domvetdoctor.di.auth.AuthComponent
 import com.sablab.domvetdoctor.di.main.MainComponent
+import com.sablab.domvetdoctor.di.registration.RegistrationComponent
 import com.sablab.domvetdoctor.ui.BaseActivity
 import dagger.BindsInstance
 import dagger.Component
@@ -23,8 +24,10 @@ interface AppComponent {
 
     fun inject(activity: BaseActivity)
     fun authComponent(): AuthComponent.Factory
+    fun registrationComponent(): RegistrationComponent.Factory
     fun mainComponent(): MainComponent.Factory
-//    fun addCarComponent(): AddCarComponent.Factory
+
+    //    fun addCarComponent(): AddCarComponent.Factory
     fun addPostComponent(): AddPostComponent.Factory
 
 }

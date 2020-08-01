@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sablab.domvetdoctor.ui.auth.AuthActivity">
+    tools:context="com.sablab.domvetdoctor.ui.registration.RegistrationActivity">
 
 
     <ImageView
@@ -27,6 +27,7 @@
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:paddingStart="20dp"
+        android:fontFamily="@font/gilroy_bold"
         android:paddingEnd="20dp"
         android:text="@string/login_main_title"
         android:textColor="@color/black"
@@ -55,11 +56,10 @@
 
     <TextView
         android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.6"
         android:layout_height="?android:actionBarSize"
         android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
         android:background="@drawable/button_shape_default_rounded"
         android:elevation="3dp"
         android:clickable="true"
@@ -68,7 +68,7 @@
         android:text="@string/register"
         android:textColor="#fff"
         android:textSize="26dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/gilroy_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

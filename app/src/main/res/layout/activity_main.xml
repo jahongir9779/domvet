@@ -6,11 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pet_pattern" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/windowBackground"
         android:orientation="vertical">
 
 
@@ -20,86 +25,71 @@
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true">
 
-            <!--                    <androidx.appcompat.widget.Toolbar-->
-            <!--                        android:id="@+id/tool_bar"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="?attr/actionBarSize"-->
-            <!--                        android:theme="@style/ToolBarStyle"-->
-            <!--                        app:layout_scrollFlags="scroll|enterAlways" />-->
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
-                style="@style/Widget.MaterialComponents.TabLayout.Colored"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ToolBarStyle"
+                app:contentInsetLeft="0dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:foregroundGravity="center_horizontal"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
-        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--            android:id="@+id/container"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="?android:actionBarSize">-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/main_fragments_container"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                app:layout_constraintBottom_toTopOf="@id/nav_view"
+                app:layout_constraintBottom_toTopOf="@id/bottomNavCard"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <!--            <ImageView-->
-            <!--                android:id="@+id/notification"-->
-            <!--                android:layout_width="?android:actionBarSize"-->
-            <!--                android:layout_height="?android:actionBarSize"-->
-            <!--                android:clickable="true"-->
-            <!--                android:focusable="true"-->
-            <!--                android:foreground="?android:selectableItemBackground"-->
-            <!--                android:padding="10dp"-->
-            <!--                android:src="@drawable/ic_baseline_notifications_none_24"-->
-            <!--                android:tint="@color/colorPrimaryDark"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/addPost"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                app:backgroundTint="@color/colorPrimary"
-                android:layout_marginEnd="14dp"
-                android:layout_marginBottom="14dp"
-                android:contentDescription="@string/add_post"
-                android:src="@drawable/baseline_add_white_24dp"
-                android:tint="#fff"
-                app:layout_constraintBottom_toTopOf="@id/nav_view"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:tint="#fff" />
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/nav_view"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bottomNavCard"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="0dp"
-                android:elevation="3dp"
-                android:maxHeight="?android:actionBarSize"
-                app:itemIconTint="@color/selector_bottom_nav"
-                app:elevation="3dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:menu="@menu/bottom_nav_menu" />
+                android:layout_height="?android:actionBarSize"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
 
-            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/nav_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/transparent_shape"
+                    android:elevation="3dp"
+                    android:maxHeight="?android:actionBarSize"
+                    app:elevation="3dp"
+                    app:itemIconTint="@color/selector_bottom_nav"
+                    app:labelVisibilityMode="unlabeled"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:menu="@menu/bottom_nav_menu" />
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

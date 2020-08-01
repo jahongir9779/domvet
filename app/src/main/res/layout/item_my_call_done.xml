@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="20dp">
+
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Evgeniya Arutyunova"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Вы были на 5 вызовах"
+            android:textColor="@color/colorAccent"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:text="23"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="Апреля,\nСреда"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvDay"
+            app:layout_constraintStart_toEndOf="@id/tvDay"
+            app:layout_constraintTop_toTopOf="@id/tvDay" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center_vertical"
+            android:text="18:30"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvDay"
+            app:layout_constraintStart_toEndOf="@id/tvMonth"
+            app:layout_constraintTop_toTopOf="@id/tvDay" />
+
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:gravity="center_vertical"
+            android:text="ЮЗАО, м.Марьино, Улица Правды, дом 24 кв162"
+            android:textColor="@color/text_grey_medium"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDay" />
+
+
+        <ImageView
+            android:id="@+id/ivAvatarDog"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+
+        <TextView
+            android:id="@+id/tvNameDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Чарли"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivAvatarDog"
+            app:layout_constraintStart_toEndOf="@id/ivAvatarDog"
+            app:layout_constraintTop_toTopOf="@id/ivAvatarDog" />
+
+        <TextView
+            android:id="@+id/tvDogInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:gravity="center_vertical"
+            android:text="Собака, Золотистый ретривер, 1 год 5 месяцев, 10.5 кг "
+            android:textColor="@color/colorAccent"
+            android:textSize="13dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatarDog" />
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="Сумма заказа - 3 506 ₽"
+            android:textColor="@color/colorAccent"
+            android:textSize="19dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDogInfo" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#f2f2f7"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toTopOf="@id/tvMoreInfo"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp">
+
+
+                <TextView
+                    android:id="@+id/lblReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/review"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    app:layout_constraintBottom_toBottomOf="@id/lblReview"
+                    app:layout_constraintStart_toEndOf="@id/lblReview"
+                    app:layout_constraintTop_toTopOf="@id/lblReview" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:gravity="center_vertical"
+                    android:text="30.03.2020"
+                    android:textColor="@color/text_grey_medium"
+                    android:textSize="13dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:gravity="center_vertical"
+                    android:text="Отличный специалист, вызываем не раз на помощь нашему Чарли. Спасибо большое!  "
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblReview" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvMoreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/gilroy_medium"
+            android:foreground="?android:selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/more_info"
+            android:textColor="@color/text_grey_medium"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardReview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+

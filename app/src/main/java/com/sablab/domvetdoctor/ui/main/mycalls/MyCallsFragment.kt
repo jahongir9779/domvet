@@ -4,15 +4,13 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 import com.sablab.domvetdoctor.R
-import com.sablab.domvetdoctor.ui.main.MainActivity
+import com.sablab.domvetdoctor.ui.main.adapters.ScreenSlidePagerAdapter
 import com.sablab.domvetdoctor.ui.main.mycalls.activecalls.ActiveCallsFragment
 import com.sablab.domvetdoctor.ui.main.mycalls.historycalls.HistoryCallsFragment
-import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_my_calls.*
 import javax.inject.Inject
 
@@ -36,7 +34,7 @@ class MyCallsFragment @Inject constructor(private val viewModelFactory: ViewMode
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
-        (activity as MainActivity).showTabLayout()
+//        (activity as MainActivity).showTabLayout()
 
 //        change_password.setOnClickListener {
 //            findNavController().navigate(R.id.action_accountFragment_to_changePasswordFragment)
@@ -51,33 +49,16 @@ class MyCallsFragment @Inject constructor(private val viewModelFactory: ViewMode
     }
 
     private fun setupViewPager() {
-        val pagerAdapter = ScreenSlidePagerAdapter(childFragmentManager)
+        val pagerAdapter =
+            ScreenSlidePagerAdapter(requireActivity(), ActiveCallsFragment(viewModelFactory),
+                                    HistoryCallsFragment(viewModelFactory))
         pager.adapter = pagerAdapter
-        TabLayoutMediator(requireActivity().findViewById(R.id.tab_layout), pager) { tab, position ->
+        TabLayoutMediator(tab_layout, pager) { tab, position ->
             tab.text = when (position) {
                 0 -> getString(R.string.active)
-                else -> getString(R.string.history)
+                else -> getString(R.string.done)
             }
         }.attach()
-    }
-
-    private inner class ScreenSlidePagerAdapter(fm: FragmentManager) :
-        FragmentStateAdapter(this) {
-
-        lateinit var currentFrag: Fragment
-        var activeOrdersFrag = ActiveCallsFragment(viewModelFactory)
-        var historyOrdersFrag = HistoryCallsFragment(viewModelFactory)
-
-        override fun getItemCount() = 2
-
-        override fun createFragment(position: Int): Fragment {
-            currentFrag = when (position) {
-                0 -> activeOrdersFrag
-                else -> historyOrdersFrag
-            }
-            return currentFrag
-        }
-
     }
 
 }

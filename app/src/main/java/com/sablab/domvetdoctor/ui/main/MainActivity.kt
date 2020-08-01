@@ -3,7 +3,6 @@ package com.sablab.domvetdoctor.ui.main
 import android.animation.LayoutTransition
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
@@ -13,12 +12,11 @@ import com.sablab.domvetdoctor.R
 import com.sablab.domvetdoctor.di.viewmodels.MainViewModelFactory
 import com.sablab.domvetdoctor.fragments.MainNavHostFragment
 import com.sablab.domvetdoctor.ui.BaseActivity
-import com.sablab.domvetdoctor.ui.addpost.AddPostActivity
-import com.sablab.domvetdoctor.ui.auth.AuthActivity
+import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
+import com.sablab.domvetdoctor.ui.main.doccalls.DocCallsFragment
 import com.sablab.domvetdoctor.ui.main.finance.FinanceFragment
 import com.sablab.domvetdoctor.ui.main.mycalls.MyCallsFragment
 import com.sablab.domvetdoctor.ui.main.profile.ProfileFragment
-import com.sablab.domvetdoctor.ui.main.searchtrip.SearchTripFragment
 import com.sablab.domvetdoctor.util.AppPreferences
 import com.sablab.domvetdoctor.util.BOTTOM_NAV_BACKSTACK_KEY
 import com.sablab.domvetdoctor.util.BottomNavControllerFix
@@ -70,18 +68,17 @@ class MainActivity : BaseActivity(), BottomNavControllerFix.OnNavigationGraphCha
 //        onRestoreInstanceState()
         setupBottomNavigationView(savedInstanceState)
 
+        bottomNavCard.setBackgroundResource(R.drawable.selector_rounded_top_corners)
     }
 
     private fun setupListeners() {
-        addPost.setOnClickListener {
-            start<AddPostActivity>()
-        }
+
     }
 
     @ExperimentalSplittiesApi
     private fun checkUserLogin() {
         if (AppPreferences.token.isBlank()) {
-            start<AuthActivity> { }
+            start<RegistrationActivity> { }
         }
     }
 
@@ -110,7 +107,7 @@ class MainActivity : BaseActivity(), BottomNavControllerFix.OnNavigationGraphCha
     ) {
         Log.d(TAG, "logInfo: onReSelectItem")
         when (fragment) {
-            is SearchTripFragment -> {
+            is DocCallsFragment -> {
 //                navController.navigate(R.id.action_nav_menu_doc_calls_self)
             }
 
@@ -151,15 +148,11 @@ class MainActivity : BaseActivity(), BottomNavControllerFix.OnNavigationGraphCha
     override fun onBackPressed() = bottomNavControllerFix.onBackPressed()
 
     private fun setupActionBar() {
-//        setSupportActionBar(tool_bar)
+        setSupportActionBar(tool_bar)
     }
 
-    fun showTabLayout() {
-        tab_layout.visibility = View.VISIBLE
-    }
-
-    fun hideTabLayout() {
-        tab_layout.visibility = View.GONE
+    fun setTitle(title: String) {
+        tvTitle.text = title
     }
 
 

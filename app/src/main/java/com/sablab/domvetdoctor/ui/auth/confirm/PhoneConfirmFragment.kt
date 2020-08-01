@@ -104,15 +104,7 @@ class PhoneConfirmFragment @Inject constructor(private val viewModelFactory: Vie
             createdAt = response.value.createdAt
             passport = response.value.passport
             email = response.value.email
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
-            phoneNumber = response.value.phoneNumber
+
         }
     }
 

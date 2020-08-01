@@ -4,12 +4,11 @@ import com.sablab.domvetdoctor.data.repository.FileUploadRemote
 import com.sablab.domvetdoctor.domain.model.PhotoBody
 import com.sablab.domvetdoctor.util.ErrorWrapper
 import com.sablab.domvetdoctor.util.ResultWrapper
-import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import java.io.File
 import javax.inject.Inject
-
 
 /**
  * Remote implementation for retrieving Bufferoo instances. This class implements the
@@ -22,7 +21,7 @@ class FileUploadRemoteImpl @Inject constructor(private val apiService: ApiServic
 
     override suspend fun uploadPhoto(file: File): ResultWrapper<PhotoBody> {
         return try {
-            val requestFile = RequestBody.create(MediaType.parse("image/jpg"), file)
+            val requestFile = RequestBody.create("image/jpg".toMediaType(), file)
             val body = MultipartBody.Part.createFormData("file", file.name, requestFile)
             val response = apiService.uploadPhoto(body)
             if (response.code == 1) ResultWrapper.Success(response.data!!)

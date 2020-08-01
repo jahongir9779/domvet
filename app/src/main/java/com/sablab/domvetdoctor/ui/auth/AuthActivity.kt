@@ -1,9 +1,7 @@
 package com.sablab.domvetdoctor.ui.auth
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
@@ -12,7 +10,6 @@ import com.sablab.domvetdoctor.R
 import com.sablab.domvetdoctor.di.viewmodels.AuthViewModelFactory
 import com.sablab.domvetdoctor.fragments.AuthNavHostFragment
 import com.sablab.domvetdoctor.ui.BaseActivity
-import kotlinx.android.synthetic.main.activity_auth.*
 import javax.inject.Inject
 import javax.inject.Named
 

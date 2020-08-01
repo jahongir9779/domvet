@@ -7,17 +7,15 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.sablab.domvetdoctor.App
+import com.google.android.material.tabs.TabLayoutMediator
 import com.sablab.domvetdoctor.R
-import com.sablab.domvetdoctor.ui.auth.AuthActivity
-import com.sablab.domvetdoctor.ui.main.MainActivity
-import com.sablab.domvetdoctor.util.AppPreferences
+import com.sablab.domvetdoctor.ui.main.adapters.ScreenSlidePagerAdapter
+import com.sablab.domvetdoctor.ui.main.finance.summary.SummaryFragment
+import com.sablab.domvetdoctor.ui.main.finance.history.HistoryTransactionsFragment
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import kotlinx.android.synthetic.main.fragment_finance.*
 import splitties.experimental.ExperimentalSplittiesApi
-import splitties.fragments.start
-import splitties.preferences.edit
 import javax.inject.Inject
 
 //@FlowPreview
@@ -50,6 +48,20 @@ class FinanceFragment @Inject constructor(private val viewModelFactory: ViewMode
         subscribeObservers()
 //        viewModel.getCarList(AppPreferences.token)
         setupViews()
+        setupViewPager()
+    }
+
+    private fun setupViewPager() {
+        val pagerAdapter =
+            ScreenSlidePagerAdapter(requireActivity(), SummaryFragment(viewModelFactory),
+                                    HistoryTransactionsFragment(viewModelFactory))
+        pager.adapter = pagerAdapter
+        TabLayoutMediator(tab_layout, pager) { tab, position ->
+            tab.text = when (position) {
+                0 -> getString(R.string.summary)
+                else -> getString(R.string.history_transactions)
+            }
+        }.attach()
     }
 
     @ExperimentalSplittiesApi

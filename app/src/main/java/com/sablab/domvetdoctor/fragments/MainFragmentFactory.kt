@@ -6,7 +6,7 @@ import com.sablab.domvetdoctor.di.main.MainScope
 import com.sablab.domvetdoctor.ui.main.finance.FinanceFragment
 import com.sablab.domvetdoctor.ui.main.mycalls.MyCallsFragment
 import com.sablab.domvetdoctor.ui.main.profile.ProfileFragment
-import com.sablab.domvetdoctor.ui.main.searchtrip.SearchTripFragment
+import com.sablab.domvetdoctor.ui.main.doccalls.DocCallsFragment
 //import com.codingwithmitch.openapi.di.main.MainScope
 //import com.codingwithmitch.openapi.ui.main.account.AccountFragment
 //import com.codingwithmitch.openapi.ui.main.account.ChangePasswordFragment
@@ -18,8 +18,8 @@ class MainFragmentFactory @Inject constructor(private val viewModelFactory: View
     FragmentFactory() {
     override fun instantiate(classLoader: ClassLoader, className: String) =
         when (className) {
-            SearchTripFragment::class.java.name -> {
-                SearchTripFragment(viewModelFactory)
+            DocCallsFragment::class.java.name -> {
+                DocCallsFragment(viewModelFactory)
             }
             MyCallsFragment::class.java.name -> {
                 MyCallsFragment(viewModelFactory)
@@ -31,7 +31,7 @@ class MainFragmentFactory @Inject constructor(private val viewModelFactory: View
                 ProfileFragment(viewModelFactory)
             }
             else -> {
-                SearchTripFragment(viewModelFactory)
+                DocCallsFragment(viewModelFactory)
             }
         }
 

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Evgeniya Arutyunova"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Вы были на 5 вызовах"
+                android:textColor="@color/colorAccent"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:text="23"
+                android:textColor="@color/black"
+                android:textSize="34dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
+
+            <TextView
+                android:id="@+id/tvMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="10dp"
+                android:text="Апреля,\nСреда"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvDay"
+                app:layout_constraintStart_toEndOf="@id/tvDay"
+                app:layout_constraintTop_toTopOf="@id/tvDay" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:text="18:30"
+                android:textColor="@color/black"
+                android:textSize="34dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvDay"
+                app:layout_constraintStart_toEndOf="@id/tvMonth"
+                app:layout_constraintTop_toTopOf="@id/tvDay" />
+
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center_vertical"
+                android:text="ЮЗАО, м.Марьино, Улица Правды, дом 24 кв162"
+                android:textColor="@color/text_grey_medium"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDay" />
+
+
+            <ImageView
+                android:id="@+id/ivAvatarDog"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+
+            <TextView
+                android:id="@+id/tvNameDog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Чарли"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivAvatarDog"
+                app:layout_constraintStart_toEndOf="@id/ivAvatarDog"
+                app:layout_constraintTop_toTopOf="@id/ivAvatarDog" />
+
+            <TextView
+                android:id="@+id/tvDogInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center_vertical"
+                android:text="Собака, Золотистый ретривер, 1 год 5 месяцев, 10.5 кг "
+                android:textColor="@color/colorAccent"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAvatarDog" />
+
+
+            <ImageView
+                android:id="@+id/icDecease"
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/disease"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDogInfo" />
+
+
+            <TextView
+                android:id="@+id/tvDecease"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Диарея, сухой кашель, тусклая шерсть"
+                android:textColor="@color/text_grey_medium"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/icDecease"
+                app:layout_constraintTop_toTopOf="@id/icDecease" />
+
+            <ImageView
+                android:id="@+id/icMessage"
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_message_one"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDecease" />
+
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Мой Пушистик совсем занемог... Ночью кашляет а днем срётся...  шерсть чернее ночи, а был рыжий! нужна ваша помощь!"
+                android:textColor="@color/text_grey_medium"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icMessage"
+                app:layout_constraintTop_toTopOf="@id/icMessage" />
+
+            <ImageView
+                android:id="@+id/icBag"
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/doc_bag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+
+            <TextView
+                android:id="@+id/tvDuty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Выезд в пределах города, Кастрация, Стерелизация, Стрижка когтей"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icBag"
+                app:layout_constraintTop_toTopOf="@id/icBag" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:background="@color/text_grey_light"
+                app:layout_constraintTop_toBottomOf="@id/tvDuty" />
+
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:text="Сумма заказа - 3 506 ₽"
+                android:textColor="@color/colorAccent"
+                android:textSize="19dp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line" />
+
+
+            <TextView
+                android:id="@+id/tagChosenByClient"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/tag_light_green"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/chosen_by_client"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/tagChosenClient"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+            <TextView
+                android:id="@+id/tagChosenClient"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/tag_light_grey"
+                android:drawableStart="@drawable/heart"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/chosen_client"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tagChosenByClient"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+
+            <TextView
+                android:id="@+id/tagLowCommission"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tag_light_grey"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/low_commission"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagChosenByClient" />
+
+            <TextView
+                android:id="@+id/tvMoreInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/gilroy_medium"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/more_info"
+                android:textColor="@color/colorAccent"
+                android:textSize="17dp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagLowCommission" />
+
+            <TextView
+                android:id="@+id/tvAcceptCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_shape_default_rounded"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:focusable="true"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/accep_call"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMoreInfo" />
+
+            <TextView
+                android:id="@+id/tvRejectCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_shape_rounded_stroke_accent"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:focusable="true"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/reject_call"
+                android:textColor="@color/colorAccent"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAcceptCall" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/round_top_right_primary"
+        android:elevation="7dp"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp"
+        android:text="@string/_new"
+        android:textColor="#fff"
+        android:textSize="12dp" />
+
+</RelativeLayout>

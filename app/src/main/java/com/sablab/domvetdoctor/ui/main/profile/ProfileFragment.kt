@@ -1,42 +1,19 @@
 package com.sablab.domvetdoctor.ui.main.profile
 
-import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.sablab.domvetdoctor.util.Constants.CODE_ADD_CAR
-import com.sablab.domvetdoctor.util.Constants.TXT_CAR
-import com.sablab.domvetdoctor.util.ErrorWrapper
-import com.sablab.domvetdoctor.util.ResultWrapper
-import com.sablab.domvetdoctor.util.exhaustive
-import com.sablab.domvetdoctor.domain.model.CarDetails
 import com.sablab.domvetdoctor.App
 import com.sablab.domvetdoctor.R
-import com.sablab.domvetdoctor.ui.auth.AuthActivity
-import com.sablab.domvetdoctor.ui.main.MainActivity
-import com.sablab.domvetdoctor.ui.viewgroups.CarItemView
-import com.sablab.domvetdoctor.ui.viewgroups.ItemAddCar
-import com.sablab.domvetdoctor.ui.viewgroups.LoadingItem
+import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
 import com.sablab.domvetdoctor.util.AppPreferences
-import com.sablab.domvetdoctor.viewobjects.CarColorViewObj
-import com.sablab.domvetdoctor.viewobjects.CarViewObj
-import com.sablab.domvetdoctor.viewobjects.IdNameViewObj
-import com.sablab.domvetdoctor.viewobjects.ImageViewObj
-import com.google.android.material.snackbar.Snackbar
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.OnItemClickListener
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import kotlinx.android.synthetic.main.fragment_profile.*
-import kotlinx.android.synthetic.main.item_car.view.*
 import splitties.experimental.ExperimentalSplittiesApi
 import splitties.fragments.start
 import splitties.preferences.edit
@@ -76,10 +53,7 @@ class ProfileFragment @Inject constructor(private val viewModelFactory: ViewMode
 
     @ExperimentalSplittiesApi
     private fun setupViews() {
-        (activity as MainActivity).hideTabLayout()
-        cardDriver.setBackgroundResource(R.drawable.stroke_rounded_bottom_corners)
-        nameSurname.text = "${AppPreferences.name} ${AppPreferences.surname}"
-        phone.text = "+${AppPreferences.phone}"
+//        (activity as MainActivity).hideTabLayout()
 
     }
 
@@ -253,11 +227,14 @@ class ProfileFragment @Inject constructor(private val viewModelFactory: ViewMode
             requireActivity().finish()
             AppPreferences.edit {
                 token = ""
-                name = ""
-                surname = ""
-                phone = ""
+                status = ""
+                id = ""
+                phoneNumber = ""
+                createdAt = ""
+                passport = ""
+                email = ""
             }
-            start<AuthActivity> {}
+            start<RegistrationActivity> {}
             (requireActivity().applicationContext as App).releaseMainComponent()
         }
 

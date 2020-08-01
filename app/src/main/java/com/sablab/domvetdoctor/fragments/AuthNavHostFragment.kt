@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.annotation.NavigationRes
 import androidx.navigation.fragment.NavHostFragment
-import com.sablab.domvetdoctor.ui.auth.AuthActivity
+import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
 
 /**
  * Created by jahon on 20-Apr-20
@@ -13,7 +13,7 @@ class AuthNavHostFragment : NavHostFragment() {
 
     override fun onAttach(context: Context) {
         childFragmentManager.fragmentFactory =
-            (activity as AuthActivity).fragmentFactory
+            (activity as RegistrationActivity).fragmentFactory
         super.onAttach(context)
     }
 

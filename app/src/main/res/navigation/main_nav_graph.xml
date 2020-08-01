@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_menu_doc_calls"
-        android:name="com.sablab.domvetdoctor.ui.main.searchtrip.SearchTripFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_search_trip">
+        android:name="com.sablab.domvetdoctor.ui.main.doccalls.DocCallsFragment"
+        android:label="@string/doc_calls"
+        tools:layout="@layout/fragment_doc_calls">
 
         <action
             android:id="@+id/action_nav_menu_doc_calls_to_nav_menu_my_calls"

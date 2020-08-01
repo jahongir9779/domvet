@@ -53,6 +53,8 @@
         android:cursorVisible="false"
         android:digits="1234567890"
         android:ems="10"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
         android:fontFamily="@font/sfpro_display_regular"
         android:inputType="number"
         android:maxLength="6"

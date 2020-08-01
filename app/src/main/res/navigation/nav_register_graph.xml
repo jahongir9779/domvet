@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_profile_graph.xml"
+    app:startDestination="@id/navPersonalInfoFragment">
+
+
+    <fragment
+        android:id="@+id/navPersonalInfoFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.personalinfo.PersonalInfoFragment"
+        android:label="@string/personal_info"
+        tools:layout="@layout/fragment_personal_info">
+        <action
+            android:id="@+id/action_navPersonalInfoFragment_to_navSelectCityFragment"
+            app:destination="@id/navSelectCityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navDocsAndCertificatesFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.docsandcertificates.DocsAndCertificatesFragment"
+        android:label="@string/docs_and_certificates"
+        tools:layout="@layout/fragment_docs_and_certificates"></fragment>
+
+    <fragment
+        android:id="@+id/navPassportAndPhotoFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.passportphoto.PassportPhotoFragment"
+        android:label="@string/passport_and_photo"
+        tools:layout="@layout/fragment_personal_info">
+        <action
+            android:id="@+id/action_navPassportAndPhotoFragment_to_navDocsAndCertificatesFragment"
+            app:destination="@id/navDocsAndCertificatesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navSelectCityFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.selectcity.SelectCityFragment"
+        android:label="@string/select_city"
+        tools:layout="@layout/fragment_select_city">
+        <action
+            android:id="@+id/action_navSelectCityFragment_to_navAddYourPhotoFragment"
+            app:destination="@id/navAddYourPhotoFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navAddYourPhotoFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.addyourphoto.AddYourPhotoFragment"
+        android:label="@string/add_your_photo"
+        tools:layout="@layout/fragment_add_your_photo">
+        <action
+            android:id="@+id/action_navAddYourPhotoFragment_to_navPassportAndPhotoFragment"
+            app:destination="@id/navPassportAndPhotoFragment" />
+    </fragment>
+
+
+</navigation>

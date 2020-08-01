@@ -19,9 +19,9 @@ import com.sablab.domvetdoctor.R
 import com.sablab.domvetdoctor.ui.addpost.AddPostActivity
 import com.sablab.domvetdoctor.ui.interfaces.IOnPostActionListener
 import com.sablab.domvetdoctor.ui.main.MainViewModel
-import com.sablab.domvetdoctor.ui.viewgroups.ActivePostItem
+import com.sablab.domvetdoctor.ui.main.finance.summary.SummaryViewModel
+import com.sablab.domvetdoctor.ui.viewgroups.ItemDocCall
 import com.sablab.domvetdoctor.viewobjects.*
-import com.google.android.material.snackbar.Snackbar
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import kotlinx.android.synthetic.main.fragment_active_calls.*
@@ -34,7 +34,7 @@ class ActiveCallsFragment @Inject constructor(private val viewModelFactory: View
 
 
     private val adapter = GroupAdapter<GroupieViewHolder>()
-    val viewmodel: ActiveCallsViewModel by viewModels {
+    val viewmodel: SummaryViewModel by viewModels {
         viewModelFactory
     }
 
@@ -153,15 +153,15 @@ class ActiveCallsFragment @Inject constructor(private val viewModelFactory: View
             val response = it ?: return@Observer
             when (response) {
                 is ErrorWrapper.ResponseError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.message!!,
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.message!!,
+//                                  Snackbar.LENGTH_SHORT).show()
 
                 }
                 is ErrorWrapper.SystemError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.err.localizedMessage.toString(),
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.err.localizedMessage.toString(),
+//                                  Snackbar.LENGTH_SHORT).show()
                 }
                 is ResultWrapper.Success -> {
                     adapter.remove(adapter.getItem(response.value))
@@ -176,15 +176,15 @@ class ActiveCallsFragment @Inject constructor(private val viewModelFactory: View
             val response = it ?: return@Observer
             when (response) {
                 is ErrorWrapper.ResponseError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.message!!,
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.message!!,
+//                                  Snackbar.LENGTH_SHORT).show()
 
                 }
                 is ErrorWrapper.SystemError -> {
-                    Snackbar.make(swipeRefreshLayout,
-                                  response.err.localizedMessage.toString(),
-                                  Snackbar.LENGTH_SHORT).show()
+//                    Snackbar.make(swipeRefreshLayout,
+//                                  response.err.localizedMessage.toString(),
+//                                  Snackbar.LENGTH_SHORT).show()
                 }
                 is ResultWrapper.Success -> {
                     adapter.remove(adapter.getItem(response.value))
@@ -226,7 +226,7 @@ class ActiveCallsFragment @Inject constructor(private val viewModelFactory: View
         } else noActiveOrdersTxt.visibility = View.GONE
 
         orders.forEach {
-            adapter.add(ActivePostItem(it, onOrderActionListener))
+            adapter.add(ItemDocCall(it, onOrderActionListener))
         }
         adapter.notifyDataSetChanged()
 

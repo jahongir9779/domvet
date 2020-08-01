@@ -6,10 +6,12 @@ import com.sablab.domvetdoctor.di.viewmodels.MainViewModelFactory
 import com.sablab.domvetdoctor.ui.main.MainViewModel
 import com.sablab.domvetdoctor.ui.main.finance.FinanceViewModel
 import com.sablab.domvetdoctor.ui.main.mycalls.MyCallsViewModel
+import com.sablab.domvetdoctor.ui.main.finance.summary.SummaryViewModel
+import com.sablab.domvetdoctor.ui.main.finance.history.HistoryTransactionsViewModel
+import com.sablab.domvetdoctor.ui.main.profile.ProfileViewModel
+import com.sablab.domvetdoctor.ui.main.doccalls.DocCallsViewModel
 import com.sablab.domvetdoctor.ui.main.mycalls.activecalls.ActiveCallsViewModel
 import com.sablab.domvetdoctor.ui.main.mycalls.historycalls.HistoryCallsViewModel
-import com.sablab.domvetdoctor.ui.main.profile.ProfileViewModel
-import com.sablab.domvetdoctor.ui.main.searchtrip.SearchTripViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -37,8 +39,8 @@ abstract class MainViewModelModule {
 
     @Binds
     @IntoMap
-    @MainViewModelKey(SearchTripViewModel::class)
-    abstract fun bindSearchTripViewModel(viewModel: SearchTripViewModel): ViewModel
+    @MainViewModelKey(DocCallsViewModel::class)
+    abstract fun bindSearchTripViewModel(viewModel: DocCallsViewModel): ViewModel
 
     @Binds
     @IntoMap
@@ -47,12 +49,22 @@ abstract class MainViewModelModule {
 
     @Binds
     @IntoMap
+    @MainViewModelKey(SummaryViewModel::class)
+    abstract fun bindSummaryViewModel(viewModel: SummaryViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @MainViewModelKey(HistoryTransactionsViewModel::class)
+    abstract fun bindHistoryTransactionsViewModel(viewModel: HistoryTransactionsViewModel): ViewModel
+
+    @Binds
+    @IntoMap
     @MainViewModelKey(ActiveCallsViewModel::class)
-    abstract fun bindActiveTripsViewModel(viewModel: ActiveCallsViewModel): ViewModel
+    abstract fun bindActiveCallsViewModel(viewModel: ActiveCallsViewModel): ViewModel
 
     @Binds
     @IntoMap
     @MainViewModelKey(HistoryCallsViewModel::class)
-    abstract fun bindHistoryTripsViewModel(viewModel: HistoryCallsViewModel): ViewModel
+    abstract fun bindHistoryCallsViewModel(viewModel: HistoryCallsViewModel): ViewModel
 
 }

@@ -109,25 +109,28 @@ class BottomNavControllerFix(
                 fragmentManager.beginTransaction().hide(active!!).show(fragment1)
                     .addToBackStack(null).commit()
                 active = fragment1
-                (activity as MainActivity).hideTabLayout()
+                (activity as MainActivity).setTitle(context.getString(R.string.doc_calls))
             }
             R.id.nav_menu_my_calls -> {
                 fragmentManager.beginTransaction().hide(active!!).show(fragment2)
                     .addToBackStack(null).commit()
                 active = fragment2
-                (activity as MainActivity).showTabLayout()
+//                (activity as MainActivity).showTabLayout()
+                (activity as MainActivity).setTitle(context.getString(R.string.my_calls))
             }
             R.id.nav_menu_my_finance -> {
-                fragmentManager.beginTransaction().hide(active!!).show(fragment4)
-                    .addToBackStack(null).commit()
-                active = fragment4
-                (activity as MainActivity).showTabLayout()
-            }
-            else -> {
                 fragmentManager.beginTransaction().hide(active!!).show(fragment3)
                     .addToBackStack(null).commit()
                 active = fragment3
-                (activity as MainActivity).hideTabLayout()
+//                (activity as MainActivity).showTabLayout()
+                (activity as MainActivity).setTitle(context.getString(R.string.my_finance))
+            }
+            else -> {
+                fragmentManager.beginTransaction().hide(active!!).show(fragment4)
+                    .addToBackStack(null).commit()
+                active = fragment4
+//                (activity as MainActivity).hideTabLayout()
+                (activity as MainActivity).setTitle(context.getString(R.string.my_account))
             }
         }
 
