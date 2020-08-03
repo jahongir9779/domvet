@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 //@FlowPreview
 //@ExperimentalCoroutinesApi
-class ServicePriceFragment @Inject constructor(private val viewModelFactory: ViewModelProvider.Factory) :
+class ServicePricesFragment @Inject constructor(private val viewModelFactory: ViewModelProvider.Factory) :
     Fragment(R.layout.fragment_service_price) {
 
     private val viewModel: ServicePriceFragViewModel by viewModels {

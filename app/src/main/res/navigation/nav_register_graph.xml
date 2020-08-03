@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/navServicePricesFragment"
-        android:name="com.sablab.domvetdoctor.ui.registration.serviceprice.ServicePriceFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.serviceprice.ServicePricesFragment"
         android:label="@string/services_and_prices"
         tools:layout="@layout/fragment_service_price">
         <action

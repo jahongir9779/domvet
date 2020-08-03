@@ -9,7 +9,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.sablab.domvetdoctor.R
 import com.sablab.domvetdoctor.ui.passportexample.PassportPhotoExampleActivity
-import com.sablab.domvetdoctor.ui.photoexample.PhotoExampleActivity
 import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
 import kotlinx.android.synthetic.main.fragment_passport_photo.*
 import splitties.fragments.start
