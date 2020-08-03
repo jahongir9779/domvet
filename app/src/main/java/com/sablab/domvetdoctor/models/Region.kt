@@ -1,7 +1,7 @@
 package com.sablab.domvetdoctor.models
 
 import androidx.room.ColumnInfo
-import com.sablab.domvetdoctor.data.db.entries.ERegion
+import com.sablab.domvetdoctor.cache.db.entries.ERegion
 
 class Region(@ColumnInfo(name = ERegion.COLUMN_REGION_ID) val regionId: String,
              @ColumnInfo(name = ERegion.COLUMN_REGION_NAME) val regionName: String,

@@ -16,7 +16,6 @@ import com.sablab.domvetdoctor.util.ResultWrapper
 import com.sablab.domvetdoctor.util.exhaustive
 import com.sablab.domvetdoctor.domain.model.PassengerPost
 import com.sablab.domvetdoctor.R
-import com.sablab.domvetdoctor.ui.addpost.AddPostActivity
 import com.sablab.domvetdoctor.ui.interfaces.IOnPostActionListener
 import com.sablab.domvetdoctor.ui.main.MainViewModel
 import com.sablab.domvetdoctor.ui.viewgroups.ItemDocCall
@@ -250,23 +249,7 @@ class SummaryFragment @Inject constructor(private val viewModelFactory: ViewMode
                                   post.from.regionName,
                                   post.from.name)
 
-            start<AddPostActivity> {
 
-                putExtra(Constants.TXT_PASSENGER_POST,
-                         PassengerPostViewObj(from,
-                                              to,
-                                              post.price,
-                                              post.departureDate,
-                                              post.timeFirstPart,
-                                              post.timeSecondPart,
-                                              post.timeThirdPart,
-                                              post.timeFourthPart,
-                                              null,
-                                              null,
-                                              post.remark,
-                                              post.seat,
-                                              post.postType))
-            }
 
         }
 

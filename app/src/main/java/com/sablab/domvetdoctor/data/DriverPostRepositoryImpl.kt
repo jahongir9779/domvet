@@ -4,13 +4,13 @@ import com.sablab.domvetdoctor.data.source.DriverPostDataStoreFactory
 import com.sablab.domvetdoctor.domain.model.Filter
 import com.sablab.domvetdoctor.domain.model.DriverPost
 import com.sablab.domvetdoctor.domain.repository.DriverPostRepository
-import com.sablab.domvetdoctor.domain.repository.PlaceRepository
+import com.sablab.domvetdoctor.domain.repository.CitiesRepository
 import com.sablab.domvetdoctor.util.ErrorWrapper
 import com.sablab.domvetdoctor.util.ResultWrapper
 import javax.inject.Inject
 
 /**
- * Provides an implementation of the [PlaceRepository] interface for communicating to and from
+ * Provides an implementation of the [CitiesRepository] interface for communicating to and from
  * data sources
  */
 class DriverPostRepositoryImpl @Inject constructor(private val factoryDriver: DriverPostDataStoreFactory) :

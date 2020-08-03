@@ -7,11 +7,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import com.sablab.domvetdoctor.App
 import com.sablab.domvetdoctor.R
-import com.sablab.domvetdoctor.di.viewmodels.AuthViewModelFactory
 import com.sablab.domvetdoctor.di.viewmodels.RegistrationViewModelFactory
-import com.sablab.domvetdoctor.fragments.AuthNavHostFragment
 import com.sablab.domvetdoctor.fragments.RegistrationNavHostFragment
 import com.sablab.domvetdoctor.ui.BaseActivity
+import kotlinx.android.synthetic.main.activity_registration.*
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -54,6 +53,10 @@ class RegistrationActivity : BaseActivity() {
 
     }
 
+    fun setRegProgress(progress: Int) {
+        progressBar.progress = progress
+    }
+
     var host: Fragment? = null
     lateinit var navHost: Fragment
 
@@ -77,6 +80,8 @@ class RegistrationActivity : BaseActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 
 
 }

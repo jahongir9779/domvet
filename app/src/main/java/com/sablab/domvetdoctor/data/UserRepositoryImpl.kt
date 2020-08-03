@@ -4,6 +4,7 @@ import com.sablab.domvetdoctor.data.source.UserDataStoreFactory
 import com.sablab.domvetdoctor.domain.model.Car
 import com.sablab.domvetdoctor.domain.model.UserCredentials
 import com.sablab.domvetdoctor.domain.repository.UserRepository
+import com.sablab.domvetdoctor.models.City
 import com.sablab.domvetdoctor.models.User
 import com.sablab.domvetdoctor.models.network.NUser
 import com.sablab.domvetdoctor.util.ErrorWrapper
@@ -40,22 +41,12 @@ class UserRepositoryImpl @Inject constructor(private val factory: UserDataStoreF
 //        return factory.retrieveDataStore(false).confirmSms(userCredentialsMapper.mapToEntity(userCredentials))
     }
 
-
-    override fun updateUserDetails(user: User): ResultWrapper<Unit> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override suspend fun updateUserCity(city: City): ResultWrapper<Boolean> {
+        TODO("Not yet implemented")
     }
 
-    override fun addOrUpdateUserCar(car: Car): ResultWrapper<Unit> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
-    override fun getUserCars(userId: String): ResultWrapper<List<Car>> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
-    override fun deleteUserCar(carId: String): ResultWrapper<List<Car>> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
 
 //    override fun clearUsers(): Completable {

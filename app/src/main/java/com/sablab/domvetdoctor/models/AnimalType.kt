@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.room.ColumnInfo
 import androidx.room.Ignore
 import kotlinx.android.parcel.Parcelize
-import com.sablab.domvetdoctor.data.db.entries.EAnimalType.Companion.COLUMN_ANIMAL_TYPE_ID
-import com.sablab.domvetdoctor.data.db.entries.EAnimalType.Companion.COLUMN_ANIMAL_TYPE_NAME
+import com.sablab.domvetdoctor.cache.db.entries.EAnimalType.Companion.COLUMN_ANIMAL_TYPE_ID
+import com.sablab.domvetdoctor.cache.db.entries.EAnimalType.Companion.COLUMN_ANIMAL_TYPE_NAME
 
 @Parcelize
 data class AnimalType(

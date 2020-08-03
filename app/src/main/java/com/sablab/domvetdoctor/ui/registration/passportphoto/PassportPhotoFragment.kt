@@ -8,6 +8,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.sablab.domvetdoctor.R
+import com.sablab.domvetdoctor.ui.passportexample.PassportPhotoExampleActivity
+import com.sablab.domvetdoctor.ui.photoexample.PhotoExampleActivity
+import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
+import kotlinx.android.synthetic.main.fragment_passport_photo.*
+import splitties.fragments.start
 import javax.inject.Inject
 
 
@@ -32,15 +37,21 @@ class PassportPhotoFragment @Inject constructor(private val viewModelFactory: Vi
         setHasOptionsMenu(true)
 
         navController = findNavController()
-
+//        cardImage1.setBackgroundResource(R.drawable.ic_rectangle_copy)
 //        login.isEnabled = true
-//        login.setOnClickListener {
-//            navController.navigate(R.id.action_navLoginFragment_to_navPhoneFragment)
-//        }
+        btn_next.setOnClickListener {
+            navController.navigate(R.id.action_navPassportAndPhotoFragment_to_navDocsAndCertificatesFragment)
+        }
+
+        cardPhotoExample.setOnClickListener {
+            start<PassportPhotoExampleActivity> { }
+        }
+
     }
 
     override fun onResume() {
         super.onResume()
+        (activity as RegistrationActivity).setRegProgress(60)
     }
 
 

@@ -7,7 +7,7 @@ import com.sablab.domvetdoctor.util.ResultWrapper
 import com.sablab.domvetdoctor.domain.model.Filter
 import com.sablab.domvetdoctor.domain.model.Place
 import com.sablab.domvetdoctor.domain.usecases.GetDriverPostWithFilter
-import com.sablab.domvetdoctor.domain.usecases.GetPlacesFeed
+import com.sablab.domvetdoctor.domain.usecases.GetCities
 import com.sablab.domvetdoctor.ui.BaseViewModel
 import com.sablab.domvetdoctor.util.AppPreferences
 import com.sablab.domvetdoctor.util.SingleLiveEvent
@@ -19,7 +19,7 @@ import splitties.experimental.ExperimentalSplittiesApi
 import javax.inject.Inject
 
 class DocCallsViewModel @Inject constructor(val getDriverPostWithFilter: GetDriverPostWithFilter,
-                                            private val getPlacesFeed: GetPlacesFeed) :
+                                            private val getCities: GetCities) :
     BaseViewModel() {
 
 
@@ -53,22 +53,7 @@ class DocCallsViewModel @Inject constructor(val getDriverPostWithFilter: GetDriv
 
     @ExperimentalSplittiesApi
     fun getPlacesFeed(queryString: String, isFrom: Boolean = true) {
-        if (isFrom) fromPlacesResponse.value = ResultWrapper.InProgress
-        else toPlacesResponse.value = ResultWrapper.InProgress
-        resetFromFeedJob(isFrom)
-        viewModelScope.launch(Dispatchers.IO + if (isFrom) fromFeedJob!! else toFeedJob!!) {
-            val response =
-                getPlacesFeed.execute(hashMapOf(Pair(Constants.TXT_TOKEN,
-                                                     AppPreferences.token),
-                                                Pair(Constants.TXT_LANG,
-                                                     AppPreferences.language),
-                                                Pair(Constants.TXT_PLACE, queryString)))
 
-            withContext(Dispatchers.Main) {
-                if (isFrom) fromPlacesResponse.value = response
-                else toPlacesResponse.value = response
-            }
-        }
     }
 
     private fun resetFromFeedJob(isFrom: Boolean) {

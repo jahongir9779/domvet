@@ -20,13 +20,62 @@
         android:id="@+id/navDocsAndCertificatesFragment"
         android:name="com.sablab.domvetdoctor.ui.registration.docsandcertificates.DocsAndCertificatesFragment"
         android:label="@string/docs_and_certificates"
-        tools:layout="@layout/fragment_docs_and_certificates"></fragment>
+        tools:layout="@layout/fragment_docs_and_certificates">
+        <action
+            android:id="@+id/action_navDocsAndCertificatesFragment_to_navBiographyFragment"
+            app:destination="@id/navBiographyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navBiographyFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.biography.BiographyFragment"
+        android:label="@string/full_biography_doctor"
+        tools:layout="@layout/fragment_biography">
+        <action
+            android:id="@+id/action_navBiographyFragment_to_navServicePricesFragment"
+            app:destination="@id/navServicePricesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navServicePricesFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.serviceprice.ServicePriceFragment"
+        android:label="@string/services_and_prices"
+        tools:layout="@layout/fragment_service_price">
+        <action
+            android:id="@+id/action_navServicePricesFragment_to_navMyRegionsFragment"
+            app:destination="@id/navMyRegionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navMyRegionsFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.myregions.MyRegionsFragment"
+        android:label="@string/my_call_regions"
+        tools:layout="@layout/fragment_my_regions">
+        <action
+            android:id="@+id/action_navMyRegionsFragment_to_navScheduleFragment"
+            app:destination="@id/navScheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navScheduleFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.schedule.ScheduleFragment"
+        android:label="@string/schedule_appointments"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_navScheduleFragment_to_navRegistrationEndFragment"
+            app:destination="@id/navRegistrationEndFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navRegistrationEndFragment"
+        android:name="com.sablab.domvetdoctor.ui.registration.end.RegistrationEndFragment"
+        android:label="@string/congratulation_title"
+        tools:layout="@layout/fragment_registration_end" />
+
 
     <fragment
         android:id="@+id/navPassportAndPhotoFragment"
         android:name="com.sablab.domvetdoctor.ui.registration.passportphoto.PassportPhotoFragment"
         android:label="@string/passport_and_photo"
-        tools:layout="@layout/fragment_personal_info">
+        tools:layout="@layout/fragment_passport_photo">
         <action
             android:id="@+id/action_navPassportAndPhotoFragment_to_navDocsAndCertificatesFragment"
             app:destination="@id/navDocsAndCertificatesFragment" />

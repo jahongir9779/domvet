@@ -32,7 +32,7 @@ class PhoneConfirmFragment @Inject constructor(private val viewModelFactory: Vie
         viewModelFactory
     }
 
-    val args: PhoneConfirmFragmentArgs by navArgs()
+//    val args: PhoneConfirmFragmentArgs by navArgs()
     lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,11 +48,11 @@ class PhoneConfirmFragment @Inject constructor(private val viewModelFactory: Vie
         navController = findNavController()
         btn_next.isEnabled = true
 
-        et_received_number.setText(args.password)
-
-        btn_next.setOnClickListener {
-            viewModel.confirm(args.phone, et_received_number.text.toString().toInt())
-        }
+//        et_received_number.setText(args.password)
+//
+//        btn_next.setOnClickListener {
+//            viewModel.confirm(args.phone, et_received_number.text.toString().toInt())
+//        }
 
     }
 

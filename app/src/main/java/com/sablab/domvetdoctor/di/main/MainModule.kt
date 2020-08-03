@@ -2,20 +2,20 @@ package com.sablab.domvetdoctor.di.main
 
 import com.sablab.domvetdoctor.data.DriverPostRepositoryImpl
 import com.sablab.domvetdoctor.data.PassengerPostRepositoryImpl
-import com.sablab.domvetdoctor.data.PlaceRepositoryImpl
+import com.sablab.domvetdoctor.data.CitiesRepositoryImpl
 import com.sablab.domvetdoctor.data.repository.DriverPostRemote
 import com.sablab.domvetdoctor.data.repository.PassengerPostDataStore
 import com.sablab.domvetdoctor.data.repository.PassengerPostRemote
-import com.sablab.domvetdoctor.data.repository.PlaceRemote
+import com.sablab.domvetdoctor.data.repository.CityRemote
 import com.sablab.domvetdoctor.data.source.*
 import com.sablab.domvetdoctor.domain.repository.DriverPostRepository
 import com.sablab.domvetdoctor.domain.repository.PassengerPostRepository
-import com.sablab.domvetdoctor.domain.repository.PlaceRepository
+import com.sablab.domvetdoctor.domain.repository.CitiesRepository
 import com.sablab.domvetdoctor.domain.usecases.*
 import com.sablab.domvetdoctor.remote.ApiService
 import com.sablab.domvetdoctor.remote.DriverPostRemoteImpl
 import com.sablab.domvetdoctor.remote.PassengerPostRemoteImpl
-import com.sablab.domvetdoctor.remote.PlaceRemoteImpl
+import com.sablab.domvetdoctor.remote.CityRemoteImpl
 import dagger.Module
 import dagger.Provides
 
@@ -26,15 +26,15 @@ object MainModule {
     @MainScope
     @Provides
     @JvmStatic
-    fun provideGetPlacesFeed(placeRepository: PlaceRepository): GetPlacesFeed {
-        return GetPlacesFeed(placeRepository)
+    fun provideGetPlacesFeed(citiesRepository: CitiesRepository): GetCities {
+        return GetCities(citiesRepository)
     }
 
     @MainScope
     @Provides
     @JvmStatic
-    fun providePlaceRepository(factory: PlaceDataStoreFactory): PlaceRepository {
-        return PlaceRepositoryImpl(factory)
+    fun providePlaceRepository(factory: CityDataStoreFactory): CitiesRepository {
+        return CitiesRepositoryImpl(factory)
     }
 
     @MainScope
@@ -110,8 +110,8 @@ object MainModule {
     @Provides
     @MainScope
     @JvmStatic
-    fun providePlaceDataStoreFactory(placeRemoteDataStore: PlaceRemoteDataStore): PlaceDataStoreFactory {
-        return PlaceDataStoreFactory(placeRemoteDataStore)
+    fun providePlaceDataStoreFactory(placeRemoteDataStore: CityRemoteDataStore): CityDataStoreFactory {
+        return CityDataStoreFactory(placeRemoteDataStore)
     }
 
     @Provides
@@ -124,8 +124,8 @@ object MainModule {
     @Provides
     @MainScope
     @JvmStatic
-    fun providePlaceRemoteDataStore(placeRemote: PlaceRemote): PlaceRemoteDataStore {
-        return PlaceRemoteDataStore(placeRemote)
+    fun providePlaceRemoteDataStore(cityRemote: CityRemote): CityRemoteDataStore {
+        return CityRemoteDataStore(cityRemote)
     }
 
     @Provides
@@ -139,8 +139,8 @@ object MainModule {
     @Provides
     @MainScope
     @JvmStatic
-    fun providePlaceRemote(apiService: ApiService): PlaceRemote {
-        return PlaceRemoteImpl(apiService)
+    fun providePlaceRemote(apiService: ApiService): CityRemote {
+        return CityRemoteImpl(apiService)
     }
 
 

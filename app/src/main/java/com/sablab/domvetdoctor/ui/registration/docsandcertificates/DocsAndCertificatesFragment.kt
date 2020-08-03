@@ -3,13 +3,19 @@ package com.sablab.domvetdoctor.ui.registration.docsandcertificates
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.sablab.domvetdoctor.App
 import com.sablab.domvetdoctor.R
-import splitties.init.appCtx
+import com.sablab.domvetdoctor.ui.docsexample.DocsPhotoExampleActivity
+import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
+import com.sablab.domvetdoctor.ui.registration.RegistrationViewModel
+import kotlinx.android.synthetic.main.fragment_docs_and_certificates.*
+import kotlinx.android.synthetic.main.fragment_docs_and_certificates.btn_next
+import kotlinx.android.synthetic.main.fragment_schedule.*
+import splitties.fragments.start
 import javax.inject.Inject
 
 
@@ -17,6 +23,11 @@ import javax.inject.Inject
 //@ExperimentalCoroutinesApi
 class DocsAndCertificatesFragment @Inject constructor(private val viewModelFactory: ViewModelProvider.Factory) :
     Fragment(R.layout.fragment_docs_and_certificates) {
+
+
+    private val activityViewModel: RegistrationViewModel by activityViewModels {
+        viewModelFactory
+    }
 
     private val viewModel: DocsAndCertificatesViewModel by viewModels {
         viewModelFactory
@@ -39,16 +50,18 @@ class DocsAndCertificatesFragment @Inject constructor(private val viewModelFacto
         navController = findNavController()
 
 //        login.isEnabled = true
-//        login.setOnClickListener {
-//            navController.navigate(R.id.action_navLoginFragment_to_navPhoneFragment)
-//        }
+        cardDocsPhotoExample.setOnClickListener {
+            start<DocsPhotoExampleActivity> { }
+        }
 
-
-
+        btn_next.setOnClickListener {
+            navController.navigate(R.id.action_navDocsAndCertificatesFragment_to_navBiographyFragment)
+        }
     }
 
     override fun onResume() {
         super.onResume()
+        (activity as RegistrationActivity).setRegProgress(80)
     }
 
 

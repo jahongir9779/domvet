@@ -76,11 +76,11 @@ class PhoneFragment @Inject constructor(private val viewModelFactory: ViewModelP
                 is ErrorWrapper.ResponseError -> {
 //                    login.revertAnimation()
                     if (response.code == -1) {
-                        val action =
-                            PhoneFragmentDirections.actionNavPhoneFragmentToNavPhoneConfirmFragment(
-                                "",
-                                viewModel.phoneNum)
-                        findNavController().navigate(action)
+//                        val action =
+//                            PhoneFragmentDirections.actionNavPhoneFragmentToNavPhoneConfirmFragment(
+//                                "",
+//                                viewModel.phoneNum)
+//                        findNavController().navigate(action)
                     } else if (response.code == Constants.errPhoneFormat) {
                         phone.error = getString(R.string.incorrect_phone_number_format)
 //                        errorMessage.visibility = View.VISIBLE
@@ -97,11 +97,11 @@ class PhoneFragment @Inject constructor(private val viewModelFactory: ViewModelP
                 }
                 is ResultWrapper.Success -> {
 //                    login.revertAnimation()
-                    val action =
-                        PhoneFragmentDirections.actionNavPhoneFragmentToNavPhoneConfirmFragment(
-                            response.value,
-                            viewModel.phoneNum)
-                    findNavController().navigate(action)
+//                    val action =
+//                        PhoneFragmentDirections.actionNavPhoneFragmentToNavPhoneConfirmFragment(
+//                            response.value,
+//                            viewModel.phoneNum)
+//                    findNavController().navigate(action)
                 }
                 ResultWrapper.InProgress -> {
 //                    errorMessage.visibility = View.INVISIBLE

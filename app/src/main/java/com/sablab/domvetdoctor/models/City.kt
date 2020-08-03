@@ -4,7 +4,7 @@ import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import androidx.room.ColumnInfo
 import kotlinx.android.parcel.Parcelize
-import com.sablab.domvetdoctor.data.db.entries.ECity
+import com.sablab.domvetdoctor.cache.db.entries.ECity
 
 @Parcelize
 data class City(
@@ -17,6 +17,8 @@ data class City(
 ) : Parcelable {
 
     companion object {
+        const val CITY = "CITY"
+
         val DIFF_UTILL = object : DiffUtil.ItemCallback<City>() {
             override fun areItemsTheSame(oldItem: City, newItem: City) = oldItem == newItem
 

@@ -1,16 +1,15 @@
 package com.sablab.domvetdoctor.data
 
 import com.sablab.domvetdoctor.data.source.PassengerPostDataStoreFactory
-import com.sablab.domvetdoctor.domain.model.Filter
 import com.sablab.domvetdoctor.domain.model.PassengerPost
 import com.sablab.domvetdoctor.domain.repository.PassengerPostRepository
-import com.sablab.domvetdoctor.domain.repository.PlaceRepository
+import com.sablab.domvetdoctor.domain.repository.CitiesRepository
 import com.sablab.domvetdoctor.util.ErrorWrapper
 import com.sablab.domvetdoctor.util.ResultWrapper
 import javax.inject.Inject
 
 /**
- * Provides an implementation of the [PlaceRepository] interface for communicating to and from
+ * Provides an implementation of the [CitiesRepository] interface for communicating to and from
  * data sources
  */
 class PassengerPostRepositoryImpl @Inject constructor(private val factoryPassenger: PassengerPostDataStoreFactory) :

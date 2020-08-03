@@ -4,8 +4,6 @@ import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
-import com.sablab.domvetdoctor.data.db.entries.EAnimal
-import com.sablab.domvetdoctor.models.Animal
 
 @Parcelize
 data class NAnimal(

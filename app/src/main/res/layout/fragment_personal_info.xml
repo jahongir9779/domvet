@@ -39,7 +39,7 @@
         android:id="@+id/surname"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:clickable="true"
         android:elevation="3dp"
         android:focusable="true"

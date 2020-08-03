@@ -3,7 +3,7 @@ package com.sablab.domvetdoctor.models
 import androidx.recyclerview.widget.DiffUtil
 import androidx.room.ColumnInfo
 import androidx.room.PrimaryKey
-import com.sablab.domvetdoctor.data.db.entries.EPhoto
+import com.sablab.domvetdoctor.cache.db.entries.EPhoto
 
 data class Photo(
     @ColumnInfo(name = EPhoto.COLUMN_ID) @PrimaryKey(autoGenerate = true) val id: Long = 0,

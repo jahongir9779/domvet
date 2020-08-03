@@ -3,7 +3,7 @@ package com.sablab.domvetdoctor.models
 import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
 import kotlinx.android.parcel.Parcelize
-import com.sablab.domvetdoctor.data.db.entries.EAnimal
+import com.sablab.domvetdoctor.cache.db.entries.EAnimal
 import com.sablab.domvetdoctor.models.network.NAnimal
 
 @Parcelize

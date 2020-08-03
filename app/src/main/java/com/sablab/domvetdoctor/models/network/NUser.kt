@@ -13,6 +13,7 @@ data class NUser(
     @SerializedName("first_name") var firstName: String? = null,
     @SerializedName("middle_name") var middleName: String? = null,
     @SerializedName("last_name") var lastName: String? = null,
+    @SerializedName("education") var education: String? = null,
     @SerializedName("passport") var passport: String? = null,
     @SerializedName("passport_registration") var passportRegistration: String? = null,
     @SerializedName("email") var email: String? = null,

@@ -5,7 +5,7 @@ package com.sablab.domvetdoctor.util
  */
 object Constants {
 
-    const val APP_DATABASE_NAME = "com.sablab.domvetdoctor.data.db"
+    const val APP_DATABASE_NAME = "com.sablab.domvetdoctor.cache.db"
     const val APP_DATABASE_VERSION = 1
 
 

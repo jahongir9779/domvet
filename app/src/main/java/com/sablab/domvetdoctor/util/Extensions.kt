@@ -2,21 +2,70 @@ package com.sablab.domvetdoctor.util
 
 import android.content.ContentResolver
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.PorterDuff
 import android.net.Uri
 import android.provider.OpenableColumns
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
-import com.sablab.domvetdoctor.util.exhaustive
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.sablab.domvetdoctor.R
+import java.io.ByteArrayOutputStream
 
 
 /**
  * Created by jahon on 22-May-20
  */
 
+
+fun Bitmap.toByteArray(quality: Int): ByteArray = run {
+    val stream = ByteArrayOutputStream()
+    this.compress(Bitmap.CompressFormat.JPEG, quality, stream)
+    stream.toByteArray()
+}
+
+
+fun Any.getString(context: Context): String = when (this) {
+    is String -> this
+    is CharSequence -> this.toString()
+    is Int -> context.resources.getString(this)
+    else -> throw Exception("text type not found")
+}
+
+
+fun Context.showMessageDialog(
+    title: Any,
+    message: Any,
+    negativBtnText: Any? = "",
+    negativBtnAction: (() -> Unit)? = null,
+    positiveBtnText: Any? = "",
+    positiveBtnAction: (() -> Unit)? = null
+) {
+    val builder = AlertDialog.Builder(this)
+        .setTitle(title.getString(this))
+        .setMessage(message.getString(this))
+
+    if (negativBtnText != null)
+        builder.setNegativeButton(
+            negativBtnText.getString(this)
+        ) { p0, p1 ->
+            negativBtnAction?.invoke()
+        }
+    if (positiveBtnText != null)
+        builder.setPositiveButton(
+            positiveBtnText.getString(this)
+        ) { p0, p1 ->
+            positiveBtnAction?.invoke()
+        }
+
+    builder.show()
+
+}
 
 fun ImageView.loadImageUrl(url: String) {
     val circularProgressDrawable = CircularProgressDrawable(this.context)
@@ -54,12 +103,26 @@ fun ContentResolver.getFileName(fileUri: Uri): String {
     return name
 }
 
+fun View.updateNextButtonState(enabled: Boolean) {
+    this.isEnabled = enabled
 
+    if (this.isEnabled) {
+        val bg = this.background
+        bg.setColorFilter(ContextCompat.getColor(this.context, R.color.colorAccent),
+                          PorterDuff.Mode.SRC_ATOP)
+        this.background = bg
+    } else {
+        val bg = this.background
+        bg.setColorFilter(ContextCompat.getColor(this.context, R.color.lightGreen),
+                          PorterDuff.Mode.SRC_ATOP)
+        this.background = bg
+    }
+}
 
 val <T> T.exhaustive: T
     get() = this
 
-fun String.numericOnly() : String {
+fun String.numericOnly(): String {
     return Regex("[^0-9]").replace(this, "")
 }
 ///**

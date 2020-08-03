@@ -1,5 +1,7 @@
 package com.sablab.domvetdoctor.di
 
+import android.content.Context
+import com.sablab.domvetdoctor.App
 import com.sablab.domvetdoctor.BuildConfig
 import com.sablab.domvetdoctor.data.CarRepositoryImpl
 import com.sablab.domvetdoctor.data.FileUploadRepositoryImpl
@@ -22,12 +24,6 @@ import dagger.Provides
 @Module
 object AppModule {
 
-//
-//    @Provides
-//    @JvmStatic
-//    fun provideGetCars(carRepository: CarRepository): GetCars {
-//        return GetCars(carRepository)
-//    }
 //
 //    @Provides
 //    @JvmStatic

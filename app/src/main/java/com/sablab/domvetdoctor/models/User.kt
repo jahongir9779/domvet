@@ -2,7 +2,7 @@ package com.sablab.domvetdoctor.models
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
-import com.sablab.domvetdoctor.data.db.entries.EUser
+import com.sablab.domvetdoctor.cache.db.entries.EUser
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -17,6 +17,7 @@ data class User(
     @ColumnInfo(name = EUser.COLUMN_USER_FIRST_NAME) var firstName: String? = "",
     @ColumnInfo(name = EUser.COLUMN_USER_MIDDLE_NAME) var middleName: String? = "",
     @ColumnInfo(name = EUser.COLUMN_USER_LAST_NAME) var lastName: String? = "",
+    @ColumnInfo(name = EUser.COLUMN_USER_EDUCATION ) var education: String? = "",
     @ColumnInfo(name = EUser.COLUMN_USER_PASSPORT) var passport: String? = "",
     @ColumnInfo(name = EUser.COLUMN_USER_PASSWORD_REGISTRATION) var passportRegistration: String? = "",
     @ColumnInfo(name = EUser.COLUMN_USER_EMAIL) var email: String? = "",

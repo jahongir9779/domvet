@@ -40,8 +40,6 @@
     <string name="air_conditioner">Air conditioner</string>
     <string name="car_year">Car year</string>
     <string name="incorrect_phone_number_format">Number format is incorrect!</string>
-    <string name="retry">Retry</string>
-    <string name="add_photo">Add photo</string>
     <string name="add_avatar_photo">Add car avatar</string>
     <string name="system_error">System error occurred!</string>
     <string name="petrol">Petrol</string>
@@ -50,7 +48,6 @@
     <string name="myCars">My Cars</string>
     <string name="delete">Delete</string>
     <string name="set_default">Set default</string>
-    <string name="edit">Edit</string>
     <string name="add_post">Add post</string>
     <string name="title_add_post">Add post</string>
     <string name="destinations">Destinations</string>
@@ -60,7 +57,6 @@
     <string name="car_and_text">Car and note</string>
     <string name="preview_post">Preview post</string>
     <string name="price_and_seats">Price and seats</string>
-    <string name="next">Далее</string>
     <string name="back">Back</string>
     <string name="create">Create</string>
     <string name="departure_asap">Departing as soon as full</string>
@@ -89,14 +85,12 @@
     <string name="no_active_orders">You have no active trips…</string>
     <string name="no_history_posts">You have no history posts…</string>
     <string name="action_sign_out">Выйти</string>
-    <string name="today">Today</string>
     <string name="price_range">Price range</string>
     <string name="apply">Apply</string>
     <string name="no_posts_found">No posts found…</string>
     <string name="reset">Reset</string>
     <string name="tomorrow">Tomorrow</string>
     <string name="my_finance">Мои финансы</string>
-    <string name="my_calls">Мои вызовы</string>
     <string name="my_account">Мой аккаунт</string>
     <string name="phone">Телефон</string>
     <string name="login_main_title">Стабильный источник новых пациентов</string>
@@ -104,9 +98,6 @@
     <string name="phone_main_title">Введите номер телефона для входа</string>
     <string name="phone_sub_title">Мы пришлем вам код подтверждения</string>
     <string name="text_terms">Нажимая кнопку \"Далее\" я принимаю Пользовательское соглашение</string>
-    <string name="receive_sms_title">Введите код подтверждения</string>
-    <string name="receive_sms_subtitle">Мы отправили вам SMS с проверочным кодом</string>
-    <string name="resend_sms">Отправить SMS повторно</string>
     <string name="doc_calls">Все вызовы</string>
     <string name="current_status">Текущий статус:</string>
     <string name="ready_for_orders">Готов принимать вызовы</string>
@@ -117,7 +108,6 @@
     <string name="my_graph_of_accept">Мой график приемов</string>
     <string name="services_and_prices">Услуги и цены</string>
     <string name="call_locations">География вызовов</string>
-    <string name="help">Помощь</string>
     <string name="_new">НОВЫЙ</string>
     <string name="chosen_by_client">Клиент выбрал вас</string>
     <string name="chosen_client">Избранный клиент</string>
@@ -130,10 +120,9 @@
     <string name="_continue">Продолжить</string>
     <string name="add_your_photo">Добавьте ваше фото</string>
     <string name="personal_info">Personal info</string>
-    <string name="docs_and_certificates">Docs and certificates</string>
+    <string name="docs_and_certificates">Документы и сертификаты</string>
     <string name="passport_and_photo">Passport and photo</string>
     <string name="select_city">Selec city</string>
-    <string name="done">Выполненные</string>
     <string name="introduce_yourself">Представьтесь пожалуйста</string>
     <string name="your_surname">Ваша фамилия</string>
     <string name="dob">Год рождения</string>
@@ -141,4 +130,502 @@
     <string name="your_dob">Ваш год рождения</string>
     <string name="your_name">Ваше имя</string>
     <string name="your_fathers_name">Ваше отчество</string>
+    <string name="select_your_city">Укажите свой город</string>
+    <string name="photo_samples">Примеры удачных фотографий</string>
+    <string name="lbl_choose_city_from_list">Выберите город из списка или воспользуйтесь быстрым поиском</string>
+    <string name="photo_sample_title">Не забывайте, хорошая фотография может помочь вам получить больше заказов!</string>
+    <string name="photo_sample_text_1">-Фотография должна быть сделана крупным планом при хорошем освещении в хорошем качестве. \n\n -Вы можете сделать фото на своём рабочем месте или во время приема совместно с питомцем.</string>
+
+
+    <string name="title_calls">Вызовы</string>
+
+    <string name="title_doctors">Врачи</string>
+
+    <string name="title_animals">Мои питомцы</string>
+
+    <string name="person">Профиль</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">Android Studio</string>
+
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="accept">Принимать</string>
+
+    <string name="cancel">Отмена</string>
+
+    <string name="error">Ошибка</string>
+
+    <string name="error_with_build_number">Ошибка %1$s</string>
+
+    <string name="genres">Genres</string>
+
+    <string name="menu_login">Login</string>
+
+    <string name="add_card">Добавить карту +</string>
+
+    <string name="login">Login</string>
+
+    <string name="sigin">Sigin</string>
+
+    <string name="password_hint">Password</string>
+
+    <string name="quantity">Quantity</string>
+
+    <string name="amount">Amount</string>
+
+    <string name="order_no">Order No: %1$s</string>
+
+    <string name="date">Date: %1$s</string>
+
+    <string name="inner_block">Inner block</string>
+
+    <string name="external_block">External block</string>
+
+    <string name="internal_block">Internal block</string>
+
+    <string name="input_internal_block">Place input internal block number</string>
+
+    <string name="input_external_block">Place input external block number</string>
+
+    <string name="input_location">Place input location</string>
+
+    <string name="save">Сохранить</string>
+
+    <string name="send">Send</string>
+
+    <string name="do_you_want_delete_card">Do yo want to delete card?</string>
+
+    <string name="warning">Предупреждение</string>
+
+    <string name="selected_conditor">Selected Conditor</string>
+
+    <string name="conditors">Conditors</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="permisson_error">you can not check the resolution, refresh the current window and try again</string>
+
+    <string name="barcode">Barcode</string>
+
+    <string name="scan">Scan</string>
+
+    <string name="generating_an_error_try_again">Generation error.<br />Try again</string>
+
+    <string name="place_input_conditor">Place input conditor</string>
+
+    <string name="take_location">Take location</string>
+
+    <string name="enable_location">Для использования всех функций приложения, включите местоположение</string>
+
+    <string name="btn_no">Нет</string>
+
+    <string name="btn_continue">Продолжать</string>
+
+    <string name="help">Помощь</string>
+
+    <string name="exit">Exit</string>
+
+    <string name="do_you_want_temporary_save_all_data">Do you want temporary save all data ?</string>
+
+    <string name="next">Далее</string>
+
+    <string name="done">\u0020Готово\u0020\u0020</string>
+
+    <string name="page_1_title">Проверенные и сертифицированные врачи</string>
+
+    <string name="page_1_subtitle">Мы проверяем наличие всех необходимых дипломов и сертификатов у всех врачей</string>
+
+    <string name="page_2_title">Отсутствие стресса у вашего питомца</string>
+
+    <string name="page_2_subtitle">Ваш питомец не будет испытывать стресс при перевозке и контакте с другими животными.</string>
+
+    <string name="page_3_title">Удобное время</string>
+
+    <string name="page_3_subtitle">Вы сами выбираете удобное для вас время и место визита врача</string>
+
+    <string name="page_4_title">Понятные цены</string>
+
+    <string name="page_4_subtitle">Вы сразу знаете точную стоимость необходимых вам услуг</string>
+
+    <string name="add_number_info_title">Введите номер телефона для входа</string>
+
+    <string name="add_number_info_subtitle">Мы пришлем вам код подтверждения</string>
+
+    <string name="input_phone_emaple_format">8881234567</string>
+
+    <string name="add_number_info_number_subtitle">Нажимая кнопку \"Далее\" я принимаю</string>
+
+    <string name="terms_of_use">Пользовательское соглашение</string>
+
+    <string name="receive_sms_title">Введите код подтверждения</string>
+
+    <string name="receive_sms_subtitle">Мы отправили вам SMS с проверочным кодом</string>
+
+    <string name="choose_city_title">Укажите свой город</string>
+
+    <string name="choose_city_subtitle">Мы подберем для вас лучших специалистов в вашем городе</string>
+
+    <string name="choose_city">Выбрать город</string>
+
+    <string name="select_city_title">Укажите свой город</string>
+
+    <string name="search_city_subtitle">Выберите город из списка или воспользуйтесь быстрым поиском</string>
+
+    <string name="skip">Пропустить</string>
+
+    <string name="congratulation_title">Поздравляем!</string>
+
+    <string name="congratulation_subtitle">Ваша заявка успешно принята на рассмотрение администраторами. После активации вашего аккаунта вы получите уведомление и сможете получать новые вызовы!</string>
+
+    <string name="profile">Profile</string>
+
+    <string name="pets_menu_edit">Править</string>
+
+    <string name="add_pet_contaner_title">Заполните анкету вашего питомца</string>
+
+    <string name="add_pet_contaner_subtitle">Вы можете зарегистрировать всех своих любимцев для удобства вызова врача</string>
+
+    <string name="add_pet">Добавить питомца +</string>
+
+    <string name="add_pet_title">Добавление питомца</string>
+
+    <string name="pit_nickname">Кличка</string>
+
+    <string name="pit_niclname_example">Пушистик</string>
+
+    <string name="add_pit_view">Вид</string>
+
+    <string name="pit_view_example">Собака</string>
+
+    <string name="pit_breed_example">Шпиц</string>
+
+    <string name="add_pit_breed">Порода</string>
+
+    <string name="add_pit_age">Возраст</string>
+
+    <string name="pit_age_month_example">2</string>
+
+    <string name="pit_age_year_example">1</string>
+
+    <string name="year_1">год</string>
+
+    <string name="year_2">года</string>
+
+    <string name="year_3">лет</string>
+
+    <string name="month_1">месяцев</string>
+
+    <string name="month_2">месяц</string>
+
+    <string name="month_3">месяца</string>
+
+    <string name="add_pit_weight">Вес</string>
+
+    <string name="pit_weight_example">1 кг</string>
+
+    <string name="pit_gender_example">Пол</string>
+
+    <string name="add_pit_gender">Пол</string>
+
+    <string name="gender_male">Самец</string>
+
+    <string name="gender_female">"Самка "</string>
+
+    <string name="select_animal_title">Вид вашего питомца</string>
+
+    <string name="choose_breed_title">Порода вашего питомца</string>
+
+    <string name="search_breed_subtitle">Выберите породу из списка или воспользуйтесь быстрым поиском</string>
+
+    <string name="first_select_animal_type">Необходимо выбрать вид животного</string>
+
+    <string name="you_need_all_permission">Вам нужно все разрешение</string>
+
+    <string name="select_picture">Select Picturel</string>
+
+    <string name="camera">Сфотографировать</string>
+
+    <string name="gallery">Выбрать фото из галереи</string>
+
+    <string name="add_pet_congratulation_message">Вы успешно добавили нового питомца в приложении ДомВет</string>
+
+    <string name="input_nick_name">Необходимо заполнить «Название».</string>
+
+    <string name="input_weght">Необходимо заполнить «Вес».</string>
+
+    <string name="select_gender">Необходимо заполнить «Пол».</string>
+
+    <string name="select_age">Необходимо заполнить «Возраст».</string>
+
+    <string name="search">Поиск</string>
+
+    <string name="animal_item_tab_title">Анкета питомца</string>
+
+    <string name="animal_history_title">История вызовов</string>
+
+    <string name="title_anima_item">Профиль питомца</string>
+
+    <string name="more_details">Подробнее..</string>
+
+    <string name="animal_delete_confirmation_message">Вы действительно хотите удалить анкету питомца?</string>
+
+    <string name="my_calls">Мои вызовы</string>
+
+    <string name="my_active_calls_title">Актуальные</string>
+
+    <string name="my_done_calls_title">Выполненные</string>
+
+    <string name="my_active_calls_container_title">Вызовите ветеринара на дом</string>
+
+    <string name="my_active_calls_contaner_subtitle">К вам приедет проверенный врач и выполнит необходимые процедуры</string>
+
+    <string name="call_doctor">Вызвать врача</string>
+
+    <string name="resend_timer_sms">"Запросить SMS повторно через %1$s"</string>
+
+    <string name="resend_sms">"Oтправить смс повторно "</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="call_doctor_title">Вызов врача</string>
+
+    <string name="your_reason">Укажите причину вызова</string>
+
+    <string name="anima_reason_comment">Комментария к вызову (Любая информация, которая может быть полезна для врача)</string>
+
+    <string name="add_photo">+ Добавить фото</string>
+
+    <string name="delete_photo_confirmation_message">Вы хотели удалить фото?</string>
+
+    <string name="other">Другое</string>
+
+    <string name="search_address">Поиск места или адреса</string>
+
+    <string name="comment_for_doctor">Комментарий для врача</string>
+
+    <string name="acd_add_address">Уточните адрес вызова</string>
+
+    <string name="addres">Адрес:</string>
+
+    <string name="flat">Квартира</string>
+
+    <string name="intercom">Домофон</string>
+
+    <string name="porch">Подъезд</string>
+
+    <string name="floor">Этаж</string>
+
+    <string name="select_service">Выбор услуг</string>
+
+    <string name="add_service">Добавить услугу +</string>
+
+    <string name="add_service_info">Вы можете сразу выбрать необходимые услуги или добавить их после приезда и консультации врача.</string>
+
+    <string name="total_price">Стоимость от: %1$s ₽</string>
+
+    <string name="from_price">От %1$s ₽</string>
+
+    <string name="doctor_service">Услуги врача</string>
+
+    <string name="search_service_info">Выберите услуги из списка или воспользуйтесь быстрым поиском.</string>
+
+    <string name="visit_service">" Вызов врача (приезд+осмотр)"</string>
+
+    <string name="select_date_and_time">Выберите дату и время</string>
+
+    <string name="choose_convenient_date">Выберите удобную дату</string>
+
+    <string name="today">Сегодня</string>
+
+    <string name="move">Перенести</string>
+
+    <string name="disease_cancel">Отменить</string>
+
+    <string name="edit">Редактировать</string>
+
+    <string name="write_doctor">Написать врачу</string>
+
+    <string name="comment_for_doctor_info">Любая информация полезная врачу</string>
+
+    <string name="add_comment">Добавить комментарий</string>
+
+    <string name="select_card_title">Выберите способ оплаты</string>
+
+    <string name="add_card_title">Добавление карты</string>
+
+    <string name="card_number">Номер карты</string>
+
+    <string name="card_owner">Владелец карты</string>
+
+    <string name="card_owner_hint">Имя Фамилия</string>
+
+    <string name="card_date">ММ/ГГ</string>
+
+    <string name="card_cvc">CVC</string>
+
+    <string name="card_name">Название карты</string>
+
+    <string name="card_name_example">Основная</string>
+
+    <string name="add_card_info">Деньги снимутся после оказания услуг. Мы проверим положительный баланс на карте, снимем 1 ₽ и сразу же его вернем</string>
+
+    <string name="add_card_congratulation_message">Вы успешно добавили карту в приложении ДомВет</string>
+
+    <string name="choose_doctor">Выберите врача</string>
+
+    <string name="last_visit_date">Последний визит %1$s</string>
+
+    <string name="visit_count">Приезжала на ваши вызовы: %1$s раз</string>
+
+    <string name="visit_price">"Сумма по вызову: %1$s ₽ "</string>
+
+    <string name="doctor_reviews">Все отзывы и рекомендации</string>
+
+    <string name="full_biography_doctor">Полная биография врача</string>
+
+    <string name="doctor_rating_detail_info">Рейтинг расчитан на основе последних %1$s оценок</string>
+
+    <string name="delete_favorite">Удалить из избранного</string>
+
+    <string name="information_about_doctor">Информация о враче</string>
+
+    <string name="professional_activity">Профессиональная деятельность:</string>
+
+    <string name="doctor_job_and_workplace">Врачт %1$s в клинике «%2$s»</string>
+
+    <string name="add_favorite">Добавить в избранное</string>
+
+    <string name="ratings_and_reviews">Оценки и отзывы</string>
+
+    <string name="comfirm">Подтвердить</string>
+
+    <string name="ok">Ок</string>
+
+    <string name="your_call_number">Ваш вызов №%1$s отправлен врачу</string>
+
+    <string name="acd_confirmation_info">"После подтверждения вызова врачом, вы получите уведомление. "</string>
+
+    <string name="disease_delete_question">Вы уверены, что хотите отменить вызов врача?</string>
+
+    <string name="yes">Да</string>
+
+    <string name="error_repeate_request">Ошибка регистрации номера попробуйте через %1$s секунд</string>
+
+    <string name="error_code_or_phone_number">Вы ввели неверный проверочный код, попробуйте снова.</string>
+
+    <string name="select_doctor">Выберите врача</string>
+
+    <string name="all_doctors">Все врачи</string>
+
+    <string name="favorite_doctors">Избранное</string>
+
+    <string name="favorite_doctors_container_title">Добавляйте врачей в избранное</string>
+
+    <string name="favorite_contaner_subtitle">"Что бы каждый ваш новый вызов был отправлен именно этому врачу! Оставляйте свои оценки и комментарии после приема "</string>
+
+    <string name="show_all">Смотреть все</string>
+
+    <string name="schedule_appointments">График приемов врача</string>
+
+    <string name="hide_review">Скрыть отзывы</string>
+
+    <string name="week_day_monday">Пн</string>
+
+    <string name="week_day_tuesday">Вт</string>
+
+    <string name="week_day_wednesday">Ср</string>
+
+    <string name="week_day_thursday">Чт</string>
+
+    <string name="week_day_friday">Пт</string>
+
+    <string name="week_day_saturday">Сб</string>
+
+    <string name="week_day_sunday">Вс</string>
+
+    <string name="schedule_appointment_info">В графике врача возможны изменения</string>
+
+    <string name="schedule_appointments_title">График приемов врача</string>
+
+    <string name="title_my_account">Мой аккаунт</string>
+
+
+    <string name="payment_type">Способы оплаты</string>
+
+    <string name="faq">FAQ</string>
+
+    <string name="first_name">Имя</string>
+
+    <string name="second_name">Oтчество</string>
+
+    <string name="phone_number">Номер:</string>
+
+    <string name="your_phone_number">твой номер телефона</string>
+
+    <string name="mail">Почта:</string>
+
+    <string name="your_mail">ваша почта</string>
+
+    <string name="user_city">Город:</string>
+
+    <string name="your_city">ваш город</string>
+
+    <string name="log_off">Выйти</string>
+
+    <string name="title_account_setting">Настройки аккаунта</string>
+
+    <string name="last_name">Фамилия</string>
+
+    <string name="title_payment_type">Способы оплаты</string>
+
+    <string name="error_email_input_correctly">E-mail введён неправильно</string>
+
+    <string name="choose_convenient_time">Выберите удобное время</string>
+
+    <string name="error_incorrect_cvc_code">Неверно указан код CVV</string>
+
+    <string name="error_incorrect_expiry_date">\tКарта просрочена или неверно указан срок действия</string>
+
+    <string name="error_you_need_to_add_pet_profile">Необходимо добавить анкету питомца</string>
+
+    <string name="error_insufficient_funds_card">Недостаточно средств на карте</string>
+
+    <string name="log_off_question">Вы действительно хотите выйти из приложения ДомВет?</string>
+
+    <string name="error_input_reason_comment">Пожалуйста, добавьте комментарий!</string>
+
+    <string name="error_select_animal">Пожалуйста, выберите животное</string>
+
+    <string name="error_select_reason">Пожалуйста, выберите причину</string>
+
+    <string name="error_necessary_to_fill_name">Необходимо заполнить \"Наме\"</string>
+
+    <string name="messaging">Сообщение…</string>
+
+    <string name="error_chat_doctor_not_found">Доктор не найден. Пожалуйста, перезапустите приложение или свяжитесь с разработчиком</string>
+
+    <string name="error_select_doctor">Пожалуйста, выберите врача</string>
+
+    <string name="error_no_doctors_available_are">К сожалению, в указанном районе нет доступных врачей</string>
+
+    <string name="disease_photo_download">Загрузите фотографии к вызову</string>
+    <string name="add_passport_photo">Добавьте скан или фото паспорта</string>
+    <string name="add_photo_sub_title">Его будут видеть пользователи в момент заказа. Презентабельная фотография увеличивает шансы получить заказ.</string>
+    <string name="add_passport_photo_sub_title">Фотография страницы с данными и страницы с пропиской.</string>
+    <string name="passport_photo_samples">Требования к фото паспорта</string>
+    <string name="passport_photo_sample_sub_title">-Фотография должна быть цветной, четкой, без искажений и в хорошем качестве. Текст документа не должен быть перевернут. Все детали паспорта должны быть точно видны, а текст - легко читаем. Края документов не должны быть обрезаны.</string>
+    <string name="docs_requirement">Требования к фото документов</string>
+    <string name="docs_and_certificates_sub_title">Загрузите пожалуйста документы подтверждающие вашу квалификацию - диплом об образовании, сертификаты и награды.</string>
+    <string name="docs_photo_samples_title">Требования к фото документов</string>
+    <string name="my_call_regions">Ваши районы вызовов</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

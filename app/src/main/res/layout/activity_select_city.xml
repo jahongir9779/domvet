@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="25dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ToolBarStyle"
+            app:contentInsetLeft="0dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="?android:actionBarSize"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:foregroundGravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/select_city_title"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_16dp"
+        android:id="@+id/search_view"
+        android:background="@drawable/bg_rounded_grey"
+        android:queryHint="@string/search" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/edtSearch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:background="@drawable/bg_rounded_grey"-->
+<!--        android:drawableStart="@drawable/ic_search"-->
+<!--        android:drawablePadding="10dp"-->
+<!--        android:fontFamily="@font/gilroy_medium"-->
+<!--        android:hint="@string/search"-->
+<!--        android:paddingStart="10dp"-->
+<!--        android:paddingEnd="10dp" />-->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/gilroy_medium"
+        android:gravity="center"
+        android:text="@string/lbl_choose_city_from_list"
+        android:textColor="@color/text_grey_light"
+        android:textSize="16dp" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/sp_cities">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/rv_cities"
+            tools:listitem="@layout/city_list_row"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

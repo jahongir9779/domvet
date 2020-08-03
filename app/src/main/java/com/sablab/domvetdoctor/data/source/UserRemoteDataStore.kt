@@ -1,10 +1,13 @@
 package com.sablab.domvetdoctor.data.source
 
-import com.sablab.domvetdoctor.util.ResultWrapper
+import android.graphics.Bitmap
 import com.sablab.domvetdoctor.data.repository.UserDataStore
 import com.sablab.domvetdoctor.data.repository.UserRemote
 import com.sablab.domvetdoctor.domain.model.UserCredentials
+import com.sablab.domvetdoctor.models.City
+import com.sablab.domvetdoctor.models.User
 import com.sablab.domvetdoctor.models.network.NUser
+import com.sablab.domvetdoctor.util.ResultWrapper
 import javax.inject.Inject
 
 /**
@@ -14,7 +17,7 @@ import javax.inject.Inject
 open class UserRemoteDataStore @Inject constructor(private val userRemote: UserRemote) :
     UserDataStore {
 
-//    override fun clearBufferoos(): Completable {
+    //    override fun clearBufferoos(): Completable {
 //        throw UnsupportedOperationException()
 //    }
 //
@@ -33,8 +36,17 @@ open class UserRemoteDataStore @Inject constructor(private val userRemote: UserR
 //        return userRemote.registerUser(user)
 //    }
 
-    override suspend fun confirmSms(userCredentialsEntity: UserCredentials): ResultWrapper<NUser> {
-        return userRemote.confirmUser(userCredentialsEntity)
+    override suspend fun confirmSms(userCredentials: UserCredentials): ResultWrapper<NUser> {
+        return userRemote.confirmUser(userCredentials)
+    }
+
+    override suspend fun saveUserCity(city: City): ResultWrapper<NUser> {
+        return userRemote.saveUserCity(city)
+
+    }
+
+    override suspend fun saveUser(user: User, image: Bitmap): ResultWrapper<NUser> {
+        return userRemote.saveUser(user, image)
     }
 //
 //    override fun isCached(): Single<Boolean> {

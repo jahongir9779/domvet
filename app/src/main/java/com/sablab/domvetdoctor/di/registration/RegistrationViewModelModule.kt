@@ -6,9 +6,13 @@ import com.sablab.domvetdoctor.di.viewmodels.RegistrationViewModelFactory
 import com.sablab.domvetdoctor.ui.registration.RegistrationViewModel
 import com.sablab.domvetdoctor.ui.registration.addyourphoto.AddYourPhotoViewModel
 import com.sablab.domvetdoctor.ui.registration.docsandcertificates.DocsAndCertificatesViewModel
+import com.sablab.domvetdoctor.ui.registration.biography.BiographyFragViewModel
+import com.sablab.domvetdoctor.ui.registration.myregions.MyRegionsFragViewModel
 import com.sablab.domvetdoctor.ui.registration.passportphoto.PassportPhotoViewModel
 import com.sablab.domvetdoctor.ui.registration.personalinfo.PersonalInfoViewModel
-import com.sablab.domvetdoctor.ui.registration.selectcity.SelectCityViewModel
+import com.sablab.domvetdoctor.ui.registration.schedule.ScheduleViewModel
+import com.sablab.domvetdoctor.ui.registration.selectcity.SelectCityFragViewModel
+import com.sablab.domvetdoctor.ui.registration.serviceprice.ServicePriceFragViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -30,31 +34,62 @@ abstract class RegistrationViewModelModule {
     @Binds
     @IntoMap
     @RegistrationViewModelKey(AddYourPhotoViewModel::class)
-    abstract fun bindAddYourPhotoViewModel(viewModel: AddYourPhotoViewModel): ViewModel
+    abstract fun bindAddYourPhotoViewModel(fragViewModel: AddYourPhotoViewModel): ViewModel
 
     @RegistrationScope
     @Binds
     @IntoMap
     @RegistrationViewModelKey(DocsAndCertificatesViewModel::class)
-    abstract fun bindDocsAndCertificatesViewModel(viewModel: DocsAndCertificatesViewModel): ViewModel
+    abstract fun bindDocsAndCertificatesViewModel(fragViewModel: DocsAndCertificatesViewModel): ViewModel
 
     @RegistrationScope
     @Binds
     @IntoMap
     @RegistrationViewModelKey(PassportPhotoViewModel::class)
-    abstract fun bindPassportPhotoViewModel(viewModel: PassportPhotoViewModel): ViewModel
+    abstract fun bindPassportPhotoViewModel(fragViewModel: PassportPhotoViewModel): ViewModel
 
     @RegistrationScope
     @Binds
     @IntoMap
     @RegistrationViewModelKey(PersonalInfoViewModel::class)
-    abstract fun bindPersonalInfoViewModel(viewModel: PersonalInfoViewModel): ViewModel
+    abstract fun bindPersonalInfoViewModel(fragViewModel: PersonalInfoViewModel): ViewModel
 
     @RegistrationScope
     @Binds
     @IntoMap
-    @RegistrationViewModelKey(SelectCityViewModel::class)
-    abstract fun bindSelectCityViewModel(viewModel: SelectCityViewModel): ViewModel
+    @RegistrationViewModelKey(SelectCityFragViewModel::class)
+    abstract fun bindSelectCityFragViewModel(fragViewModel: SelectCityFragViewModel): ViewModel
+
+
+    @RegistrationScope
+    @Binds
+    @IntoMap
+    @RegistrationViewModelKey(ServicePriceFragViewModel::class)
+    abstract fun bindServicePriceViewModel(fragViewModel: ServicePriceFragViewModel): ViewModel
+
+
+
+    @RegistrationScope
+    @Binds
+    @IntoMap
+    @RegistrationViewModelKey(ScheduleViewModel::class)
+    abstract fun bindScheduleViewModel(fragViewModel: ScheduleViewModel): ViewModel
+
+
+
+    @RegistrationScope
+    @Binds
+    @IntoMap
+    @RegistrationViewModelKey(MyRegionsFragViewModel::class)
+    abstract fun bindMyRegionsViewModel(fragViewModel: MyRegionsFragViewModel): ViewModel
+
+
+
+    @RegistrationScope
+    @Binds
+    @IntoMap
+    @RegistrationViewModelKey(BiographyFragViewModel::class)
+    abstract fun bindEducationViewModel(fragViewModel: BiographyFragViewModel): ViewModel
 
 
 
