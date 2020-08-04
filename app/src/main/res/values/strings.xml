@@ -628,4 +628,12 @@
     <string name="my_call_regions">Ваши районы вызовов</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="education_title">Данные об образовании</string>
+    <string name="biography_sub_title">Расскажите о вашем образовании и стаже работы ветеринаром.</string>
+    <string name="education">Образование</string>
+    <string name="graduated_year">Год окончания</string>
+    <string name="work_xp">Стаж работы</string>
+    <string name="short_biography">Краткая биография:</string>
+    <string name="biography_hint">Расскажите вкратце о вашем профессиональном пути, наградах, профессиональных увлечениях.</string>
+    <string name="biography_example_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 </resources>

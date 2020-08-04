@@ -8,8 +8,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.sablab.domvetdoctor.R
+import com.sablab.domvetdoctor.ui.biographyexample.BiographyExampleActivity
 import com.sablab.domvetdoctor.ui.registration.RegistrationActivity
 import kotlinx.android.synthetic.main.fragment_biography.*
+import splitties.fragments.start
 import javax.inject.Inject
 
 
@@ -40,9 +42,10 @@ class BiographyFragment @Inject constructor(private val viewModelFactory: ViewMo
             navController.navigate(R.id.action_navBiographyFragment_to_navServicePricesFragment)
         }
 
-//        cardPhotoExample.setOnClickListener {
-//            start<PassportPhotoExampleActivity> { }
-//        }
+
+        cardBioExample.setOnClickListener {
+            start<BiographyExampleActivity> { }
+        }
 
     }
 

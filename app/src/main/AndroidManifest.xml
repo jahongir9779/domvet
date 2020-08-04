@@ -22,6 +22,7 @@
         android:theme="@style/NoActionBar">
         <activity android:name=".ui.photoexample.PhotoExampleActivity"></activity>
         <activity android:name=".ui.passportexample.PassportPhotoExampleActivity"></activity>
+        <activity android:name=".ui.biographyexample.BiographyExampleActivity"></activity>
         <activity android:name=".ui.docsexample.DocsPhotoExampleActivity"></activity>
 
         <activity android:name=".ui.biography.BiographyActivity"></activity>
