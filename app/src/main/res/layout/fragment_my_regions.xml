@@ -16,7 +16,7 @@
         android:gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="@string/add_passport_photo"
+        android:text="@string/your_call_regions"
         android:textColor="@color/black"
         android:textSize="21dp"
         android:textStyle="bold"
@@ -33,7 +33,7 @@
         android:gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:text="@string/add_passport_photo_sub_title"
+        android:text="@string/select_regions_which_is_convenient_for_you"
         android:textColor="@color/text_grey"
         android:textSize="16dp"
         android:textStyle="normal"
@@ -42,50 +42,6 @@
         app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardPhotoExample"
-        android:layout_width="0dp"
-        android:layout_height="?android:actionBarSize"
-        android:layout_marginTop="40dp"
-        android:clickable="true"
-        android:elevation="3dp"
-        android:focusable="true"
-        android:foreground="?android:selectableItemBackground"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.8">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:id="@+id/edtCity"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:focusable="false"
-                android:gravity="center"
-                android:hint="@string/passport_photo_samples"
-                android:maxLines="1"
-                android:textColor="@color/text_grey_medium"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="18dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="15dp"
-                android:src="@drawable/disclosure_indicator" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
 
     <androidx.appcompat.widget.AppCompatButton

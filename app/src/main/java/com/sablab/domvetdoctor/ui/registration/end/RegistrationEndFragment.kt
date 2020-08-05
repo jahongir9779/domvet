@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.sablab.domvetdoctor.R
+import com.sablab.domvetdoctor.ui.main.MainActivity
+import kotlinx.android.synthetic.main.fragment_registration_end.*
+import splitties.fragments.start
 import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,6 +40,17 @@ class RegistrationEndFragment @Inject constructor(private val viewModelFactory: 
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_registration_end, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        super.onViewCreated(view, savedInstanceState)
+
+        registrationEnd.setOnClickListener {
+            start<MainActivity> {}
+            requireActivity().finish()
+        }
+
     }
 
     companion object {

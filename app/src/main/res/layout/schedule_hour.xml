@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvHour"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_margin="5dp"
+    android:fontFamily="@font/gilroy_semi_bold"
+    android:gravity="bottom|center_horizontal"
+    android:textColor="@color/black"
+    android:textSize="14dp"
+    android:textStyle="bold" />
+
+

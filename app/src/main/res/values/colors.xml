@@ -31,7 +31,7 @@
     <color name="text_grey_light">#c7c8cc</color>
     <color name="text_grey_medium">#8e8e93</color>
     <color name="bg_grey">#f2f2f7</color>
-    <color name="today_background">#FF8D85</color>
+    <color name="light_red">#FF8D85</color>
     <color name="today_border">#702822</color>
     <color name="background">#FFFFFF</color>
 

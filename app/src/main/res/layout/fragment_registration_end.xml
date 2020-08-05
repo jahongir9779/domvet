@@ -58,7 +58,7 @@
 
 
     <TextView
-        android:id="@+id/login"
+        android:id="@+id/registrationEnd"
         android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
         android:layout_gravity="start"
