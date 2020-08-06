@@ -46,17 +46,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_photo_grid"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="240dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_sub_title"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"
-        tools:listitem="@layout/add_doctor_cal_photo"/>
+        tools:listitem="@layout/item_additional_doc_photo"/>
 
 
     <FrameLayout
@@ -130,12 +131,12 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:id="@+id/icAdd1"
+            android:id="@+id/icAdd"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/shape_round_stroke_white"
+            android:background="@drawable/shape_round"
             android:elevation="5dp"
             android:src="@drawable/ic_add_photo_vector" />
 
@@ -145,8 +146,11 @@
             android:layout_height="40dp"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/shape_round_stroke_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
             android:elevation="5dp"
+            android:background="@drawable/shape_round"
             android:src="@drawable/ic_remove_photo"
             android:visibility="invisible" />
 
@@ -160,7 +164,7 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
-        app:cardCornerRadius="50dp"
+        app:cardCornerRadius="30dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,15 +174,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:gravity="center_vertical"
             android:layout_height="?android:actionBarSize">
 
             <TextView
                 android:id="@+id/edtCity"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                android:focusable="false"
                 android:gravity="center"
                 android:hint="@string/docs_requirement"
                 android:maxLines="1"

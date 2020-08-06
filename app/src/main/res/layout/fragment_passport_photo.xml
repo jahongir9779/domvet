@@ -41,167 +41,218 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
 
-    <FrameLayout
-        android:id="@+id/frame1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toStartOf="@id/frame2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub_title">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImage1"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toStartOf="@id/frame2"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@id/cardImage2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_sub_title">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardImage1"
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:selectableItemBackground"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="5dp"
-            app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageBg1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_margin="5dp"-->
+            <!--                android:background="@drawable/bg_rounded_grey"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/footPrint1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="30dp"
+                android:src="@drawable/ic_picture"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/imageBg1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/bg_rounded_grey"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageView
-                    android:id="@+id/footPrint1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="30dp"
-                    android:src="@drawable/ic_picture"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/image1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/icAdd1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/shape_round_stroke_white"
-            android:elevation="5dp"
-            android:src="@drawable/ic_add_photo_vector" />
+    <ImageView
+        android:id="@+id/icAdd1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:elevation="5dp"
+        android:background="@drawable/shape_round"
+        android:src="@drawable/ic_add_photo_vector"
+        app:layout_constraintBottom_toBottomOf="@id/cardImage1"
+        app:layout_constraintEnd_toEndOf="@id/cardImage1" />
 
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/icRemove1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:focusable="true"
+        android:background="@drawable/shape_round"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_remove_photo"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/cardImage1"
+        app:layout_constraintEnd_toEndOf="@id/cardImage1" />
 
-    <FrameLayout
-        android:id="@+id/frame2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/frame1"
+                app:layout_constraintTop_toBottomOf="@id/tv_sub_title">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImage2"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@id/frame1"
+        app:layout_constraintStart_toEndOf="@id/cardImage1"
         app:layout_constraintTop_toBottomOf="@id/tv_sub_title">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardImage2"
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:selectableItemBackground"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="5dp"
-            app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageBg2"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_margin="5dp"-->
+            <!--                android:background="@drawable/bg_rounded_grey"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/footPrint2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="30dp"
+                android:src="@drawable/ic_picture"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/imageBg2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/bg_rounded_grey"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageView
-                    android:id="@+id/footPrint2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="30dp"
-                    android:src="@drawable/ic_picture"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/image2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/icAdd2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/shape_round_stroke_white"
-            android:elevation="5dp"
-            android:src="@drawable/ic_add_photo_vector" />
+    <ImageView
+        android:id="@+id/icAdd2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/shape_round"
+        android:elevation="5dp"
+        android:src="@drawable/ic_add_photo_vector"
+        app:layout_constraintBottom_toBottomOf="@id/cardImage2"
+        app:layout_constraintEnd_toEndOf="@id/cardImage2" />
 
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/icRemove2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:elevation="5dp"
+        android:background="@drawable/shape_round"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_remove_photo"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/cardImage2"
+        app:layout_constraintEnd_toEndOf="@id/cardImage2" />
+
+        </FrameLayout>
 
 
     <androidx.cardview.widget.CardView
@@ -256,7 +307,7 @@
         android:layout_marginTop="@dimen/size_16dp"
         android:layout_marginBottom="?android:actionBarSize"
         android:background="@drawable/button_shape_default_rounded"
-        android:enabled="true"
+        android:enabled="false"
         android:fontFamily="@font/gilroy_black"
         android:text="@string/_continue"
         android:textColor="#fff"

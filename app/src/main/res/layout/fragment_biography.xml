@@ -242,14 +242,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardBioExample"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="50dp"
         android:clickable="true"
         android:elevation="3dp"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
-        app:cardCornerRadius="50dp"
+        app:cardCornerRadius="30dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toTopOf="@id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +258,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="?android:actionBarSize">
 
 
             <TextView

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.add_doctor_cal_photo.view.*
+import kotlinx.android.synthetic.main.item_additional_doc_photo.view.*
 import com.sablab.domvetdoctor.R
 import com.sablab.domvetdoctor.models.Photo
 
@@ -20,7 +20,7 @@ class PhotoAdapter(
         if (mInflater == null)
             mInflater = LayoutInflater.from(parent.context)
 
-        return ViewHolder(mInflater!!.inflate(R.layout.add_doctor_cal_photo, parent, false))
+        return ViewHolder(mInflater!!.inflate(R.layout.item_additional_doc_photo, parent, false))
 
     }
 
@@ -40,7 +40,7 @@ class PhotoAdapter(
             item = i
             Glide.with(itemView).load(item?.image).into(itemView.iv)
 
-            itemView.btn_delete.setOnClickListener {
+            itemView.ivDelete.setOnClickListener {
                 item?.let { deletePhotoAction.invoke(it) }
             }
         }

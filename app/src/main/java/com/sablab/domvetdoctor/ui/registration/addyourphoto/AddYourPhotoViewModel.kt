@@ -12,25 +12,5 @@ import javax.inject.Inject
 
 class AddYourPhotoViewModel @Inject constructor() : BaseViewModel() {
 
-    private val _imageBitmap = MutableLiveData<Bitmap?>()
-    val imageBitmap: LiveData<Bitmap?> get() = _imageBitmap
-
-    fun setImageUri(imageUri: Uri?) {
-        try {
-            if (imageUri != null) {
-                val bitmap = MediaStore.Images.Media.getBitmap(
-                    App.getAppContext()?.contentResolver,
-                    imageUri
-                )
-                _imageBitmap.value = bitmap
-            }
-        } catch (e: Exception) {
-        }
-    }
-
-
-    fun setImageBitmap(image: Bitmap?) {
-        _imageBitmap.value = image
-    }
 
 }

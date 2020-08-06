@@ -640,4 +640,6 @@
     <string name="in_which_you_can_serve_calls">В которое вы можете выехжать на вызовы.</string>
     <string name="your_call_regions">Ваши районы вызовов</string>
     <string name="select_regions_which_is_convenient_for_you">Выберите районы и станции метро где вы готовы совершать вызовы.</string>
+    <string name="service_prices_and_specialty">Стоимость ваших услуг и специализация</string>
+    <string name="service_prices_sub_title">Заполните стоимость процедур, по тем типам животных на которых вы специализируетесь.</string>
 </resources>

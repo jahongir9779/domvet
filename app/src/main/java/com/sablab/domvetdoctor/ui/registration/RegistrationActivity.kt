@@ -1,5 +1,8 @@
 package com.sablab.domvetdoctor.ui.registration
 
+import android.app.Activity
+import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.viewModels
@@ -10,6 +13,8 @@ import com.sablab.domvetdoctor.R
 import com.sablab.domvetdoctor.di.viewmodels.RegistrationViewModelFactory
 import com.sablab.domvetdoctor.fragments.RegistrationNavHostFragment
 import com.sablab.domvetdoctor.ui.BaseActivity
+import com.sablab.domvetdoctor.util.REQUEST_GALLERY
+import com.sablab.domvetdoctor.util.REQUEST_IMAGE_CAPTURE
 import kotlinx.android.synthetic.main.activity_registration.*
 import javax.inject.Inject
 import javax.inject.Named
@@ -24,7 +29,7 @@ class RegistrationActivity : BaseActivity() {
     @Named("RegistrationFragmentFactory")
     lateinit var fragmentFactory: FragmentFactory
 
-    private val viewModel: RegistrationViewModel by viewModels {
+     val viewModel: RegistrationViewModel by viewModels {
         viewModelFactory
     }
 
@@ -74,15 +79,30 @@ class RegistrationActivity : BaseActivity() {
             .commit()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
             android.R.id.home -> onBackPressed()
         }
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+
+            when (requestCode.toString().substring(2).toInt()) {
+                REQUEST_GALLERY -> {
+                    viewModel.setImageUri(data!!.data,
+                                          requestCode.toString().substring(0, 2).toInt())
+                }
+                REQUEST_IMAGE_CAPTURE -> {
+                    val bitmapImg = data!!.extras!!.get("data") as Bitmap
+                    viewModel.setImageBitmap(bitmapImg, requestCode.toString().substring(0, 2).toInt())
+                }
+            }
 
 
-
+        }
+    }
 }
 

@@ -81,6 +81,14 @@ fun ImageView.loadCircleImageUrl(url: String) {
     Glide.with(this.context).load(url).apply(RequestOptions().circleCrop()).into(this)
 }
 
+fun ImageView.loadCircleBitmap(bitmap: Bitmap) {
+    Glide.with(this.context).load(bitmap).apply(RequestOptions().circleCrop()).into(this)
+}
+
+fun ImageView.loadBitmap(bitmap: Bitmap) {
+    Glide.with(this.context).load(bitmap).into(this)
+}
+
 fun View.hideKeyboard() {
     val imm = this.context!!.getSystemService(Context.INPUT_METHOD_SERVICE)!! as InputMethodManager
     imm.hideSoftInputFromWindow(this.windowToken, 0)
